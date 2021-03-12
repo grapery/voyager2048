@@ -1,0 +1,3 @@
+[submodule "common-protoc"]
+	path = common-protoc
+	url = https://github.com/grapery/common-protoc.git

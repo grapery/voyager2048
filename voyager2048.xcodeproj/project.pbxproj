@@ -3,10 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F04E18625FAF1CF00F301FF /* SwiftProtobuf in Frameworks */ = {isa = PBXBuildFile; productRef = 0F04E18525FAF1CF00F301FF /* SwiftProtobuf */; };
+		0F04E18825FAF1CF00F301FF /* SwiftProtobufPluginLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 0F04E18725FAF1CF00F301FF /* SwiftProtobufPluginLibrary */; };
+		0F04E18E25FAF27700F301FF /* service.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F04E18D25FAF27700F301FF /* service.pb.swift */; };
 		0FE211EA25FAED7A003F1044 /* voyager2048App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE211E925FAED7A003F1044 /* voyager2048App.swift */; };
 		0FE211EC25FAED7A003F1044 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE211EB25FAED7A003F1044 /* ContentView.swift */; };
 		0FE211EE25FAED7F003F1044 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FE211ED25FAED7F003F1044 /* Assets.xcassets */; };
@@ -35,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F04E18D25FAF27700F301FF /* service.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = service.pb.swift; sourceTree = "<group>"; };
 		0FE211E625FAED7A003F1044 /* voyager2048.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = voyager2048.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FE211E925FAED7A003F1044 /* voyager2048App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = voyager2048App.swift; sourceTree = "<group>"; };
 		0FE211EB25FAED7A003F1044 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -56,6 +60,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F04E18825FAF1CF00F301FF /* SwiftProtobufPluginLibrary in Frameworks */,
+				0F04E18625FAF1CF00F301FF /* SwiftProtobuf in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +82,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F04E18C25FAF27700F301FF /* api */ = {
+			isa = PBXGroup;
+			children = (
+				0F04E18D25FAF27700F301FF /* service.pb.swift */,
+			);
+			path = api;
+			sourceTree = "<group>";
+		};
 		0FE211DD25FAED7A003F1044 = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +113,7 @@
 		0FE211E825FAED7A003F1044 /* voyager2048 */ = {
 			isa = PBXGroup;
 			children = (
+				0F04E18C25FAF27700F301FF /* api */,
 				0FE211E925FAED7A003F1044 /* voyager2048App.swift */,
 				0FE211EB25FAED7A003F1044 /* ContentView.swift */,
 				0FE211ED25FAED7F003F1044 /* Assets.xcassets */,
@@ -152,6 +167,10 @@
 			dependencies = (
 			);
 			name = voyager2048;
+			packageProductDependencies = (
+				0F04E18525FAF1CF00F301FF /* SwiftProtobuf */,
+				0F04E18725FAF1CF00F301FF /* SwiftProtobufPluginLibrary */,
+			);
 			productName = voyager2048;
 			productReference = 0FE211E625FAED7A003F1044 /* voyager2048.app */;
 			productType = "com.apple.product-type.application";
@@ -223,6 +242,9 @@
 				Base,
 			);
 			mainGroup = 0FE211DD25FAED7A003F1044;
+			packageReferences = (
+				0F04E18425FAF1CF00F301FF /* XCRemoteSwiftPackageReference "swift-protobuf" */,
+			);
 			productRefGroup = 0FE211E725FAED7A003F1044 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -267,6 +289,7 @@
 			files = (
 				0FE211F325FAED7F003F1044 /* Persistence.swift in Sources */,
 				0FE211EC25FAED7A003F1044 /* ContentView.swift in Sources */,
+				0F04E18E25FAF27700F301FF /* service.pb.swift in Sources */,
 				0FE211EA25FAED7A003F1044 /* voyager2048App.swift in Sources */,
 				0FE211F625FAED7F003F1044 /* voyager2048.xcdatamodeld in Sources */,
 			);
@@ -588,6 +611,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0F04E18425FAF1CF00F301FF /* XCRemoteSwiftPackageReference "swift-protobuf" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-protobuf.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.15.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0F04E18525FAF1CF00F301FF /* SwiftProtobuf */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0F04E18425FAF1CF00F301FF /* XCRemoteSwiftPackageReference "swift-protobuf" */;
+			productName = SwiftProtobuf;
+		};
+		0F04E18725FAF1CF00F301FF /* SwiftProtobufPluginLibrary */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0F04E18425FAF1CF00F301FF /* XCRemoteSwiftPackageReference "swift-protobuf" */;
+			productName = SwiftProtobufPluginLibrary;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		0FE211F425FAED7F003F1044 /* voyager2048.xcdatamodeld */ = {
