@@ -19,6 +19,14 @@
 		0F196D38261B611600C46707 /* picture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F196D37261B611600C46707 /* picture.swift */; };
 		0F196D3D261B613000C46707 /* shortword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F196D3C261B613000C46707 /* shortword.swift */; };
 		0F196D42261B614600C46707 /* video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F196D41261B614600C46707 /* video.swift */; };
+		0FAD99A22650A72F0095ACC5 /* user.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAD999A2650A72E0095ACC5 /* user.pb.swift */; };
+		0FAD99A32650A72F0095ACC5 /* group.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAD999B2650A72E0095ACC5 /* group.pb.swift */; };
+		0FAD99A42650A72F0095ACC5 /* team.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAD999C2650A72E0095ACC5 /* team.pb.swift */; };
+		0FAD99A52650A72F0095ACC5 /* comment.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAD999D2650A72F0095ACC5 /* comment.pb.swift */; };
+		0FAD99A62650A72F0095ACC5 /* service.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAD999E2650A72F0095ACC5 /* service.pb.swift */; };
+		0FAD99A72650A72F0095ACC5 /* item.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAD999F2650A72F0095ACC5 /* item.pb.swift */; };
+		0FAD99A82650A72F0095ACC5 /* view_model.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAD99A02650A72F0095ACC5 /* view_model.pb.swift */; };
+		0FAD99A92650A72F0095ACC5 /* project.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAD99A12650A72F0095ACC5 /* project.pb.swift */; };
 		0FE211EA25FAED7A003F1044 /* voyager2048App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE211E925FAED7A003F1044 /* voyager2048App.swift */; };
 		0FE211EC25FAED7A003F1044 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE211EB25FAED7A003F1044 /* ContentView.swift */; };
 		0FE211EE25FAED7F003F1044 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FE211ED25FAED7F003F1044 /* Assets.xcassets */; };
@@ -57,6 +65,14 @@
 		0F196D37261B611600C46707 /* picture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = picture.swift; sourceTree = "<group>"; };
 		0F196D3C261B613000C46707 /* shortword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shortword.swift; sourceTree = "<group>"; };
 		0F196D41261B614600C46707 /* video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = video.swift; sourceTree = "<group>"; };
+		0FAD999A2650A72E0095ACC5 /* user.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = user.pb.swift; sourceTree = "<group>"; };
+		0FAD999B2650A72E0095ACC5 /* group.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = group.pb.swift; sourceTree = "<group>"; };
+		0FAD999C2650A72E0095ACC5 /* team.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = team.pb.swift; sourceTree = "<group>"; };
+		0FAD999D2650A72F0095ACC5 /* comment.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = comment.pb.swift; sourceTree = "<group>"; };
+		0FAD999E2650A72F0095ACC5 /* service.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = service.pb.swift; sourceTree = "<group>"; };
+		0FAD999F2650A72F0095ACC5 /* item.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = item.pb.swift; sourceTree = "<group>"; };
+		0FAD99A02650A72F0095ACC5 /* view_model.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = view_model.pb.swift; sourceTree = "<group>"; };
+		0FAD99A12650A72F0095ACC5 /* project.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = project.pb.swift; sourceTree = "<group>"; };
 		0FE211E625FAED7A003F1044 /* voyager2048.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = voyager2048.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FE211E925FAED7A003F1044 /* voyager2048App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = voyager2048App.swift; sourceTree = "<group>"; };
 		0FE211EB25FAED7A003F1044 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -103,6 +119,14 @@
 		0F04E18C25FAF27700F301FF /* api */ = {
 			isa = PBXGroup;
 			children = (
+				0FAD999D2650A72F0095ACC5 /* comment.pb.swift */,
+				0FAD999B2650A72E0095ACC5 /* group.pb.swift */,
+				0FAD999F2650A72F0095ACC5 /* item.pb.swift */,
+				0FAD99A12650A72F0095ACC5 /* project.pb.swift */,
+				0FAD999E2650A72F0095ACC5 /* service.pb.swift */,
+				0FAD999C2650A72E0095ACC5 /* team.pb.swift */,
+				0FAD999A2650A72E0095ACC5 /* user.pb.swift */,
+				0FAD99A02650A72F0095ACC5 /* view_model.pb.swift */,
 				0F04E18D25FAF27700F301FF /* service.pb.swift */,
 			);
 			path = api;
@@ -340,16 +364,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				0FE211F325FAED7F003F1044 /* Persistence.swift in Sources */,
+				0FAD99A62650A72F0095ACC5 /* service.pb.swift in Sources */,
 				0F196D1A261B609500C46707 /* login.swift in Sources */,
 				0FE211EC25FAED7A003F1044 /* ContentView.swift in Sources */,
+				0FAD99A22650A72F0095ACC5 /* user.pb.swift in Sources */,
+				0FAD99A42650A72F0095ACC5 /* team.pb.swift in Sources */,
 				0F196D42261B614600C46707 /* video.swift in Sources */,
+				0FAD99A52650A72F0095ACC5 /* comment.pb.swift in Sources */,
 				0F196D1F261B60A700C46707 /* setting.swift in Sources */,
+				0FAD99A32650A72F0095ACC5 /* group.pb.swift in Sources */,
 				0F196D38261B611600C46707 /* picture.swift in Sources */,
+				0FAD99A82650A72F0095ACC5 /* view_model.pb.swift in Sources */,
+				0FAD99A72650A72F0095ACC5 /* item.pb.swift in Sources */,
 				0F196D24261B60D400C46707 /* user.swift in Sources */,
 				0F196D33261B610300C46707 /* item.swift in Sources */,
 				0F196D3D261B613000C46707 /* shortword.swift in Sources */,
 				0F196D2E261B60EF00C46707 /* project.swift in Sources */,
 				0F04E18E25FAF27700F301FF /* service.pb.swift in Sources */,
+				0FAD99A92650A72F0095ACC5 /* project.pb.swift in Sources */,
 				0FE211EA25FAED7A003F1044 /* voyager2048App.swift in Sources */,
 				0F196D29261B60E300C46707 /* group.swift in Sources */,
 				0FE211F625FAED7F003F1044 /* voyager2048.xcdatamodeld in Sources */,
