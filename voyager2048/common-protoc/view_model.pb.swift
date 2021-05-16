@@ -596,6 +596,36 @@ struct Grapery_Api_ProjectInfo {
   fileprivate var _storage = _StorageClass.defaultInstance
 }
 
+struct Grapery_Api_ProjectProfileInfo {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  var projectID: UInt64 = 0
+
+  var groupID: UInt32 = 0
+
+  var description_p: String = String()
+
+  var watchingCount: UInt64 = 0
+
+  var involvedCount: UInt64 = 0
+
+  var avatar: String = String()
+
+  var visable: Grapery_Api_VisibleType = .allPublic
+
+  var isAchieve: Bool = false
+
+  var isClose: Bool = false
+
+  var isPrivate: Bool = false
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+}
+
 struct Grapery_Api_ActiveInfo {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
@@ -855,16 +885,6 @@ struct Grapery_Api_UserProfileInfo {
 }
 
 struct Grapery_Api_GroupProfileInfo {
-  // SwiftProtobuf.Message conformance is added in an extension below. See the
-  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
-  // methods supported on all messages.
-
-  var unknownFields = SwiftProtobuf.UnknownStorage()
-
-  init() {}
-}
-
-struct Grapery_Api_ProjectProfileInfo {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
@@ -1309,6 +1329,92 @@ extension Grapery_Api_ProjectInfo: SwiftProtobuf.Message, SwiftProtobuf._Message
   }
 }
 
+extension Grapery_Api_ProjectProfileInfo: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".ProjectProfileInfo"
+  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .standard(proto: "project_id"),
+    2: .standard(proto: "group_id"),
+    3: .same(proto: "Description"),
+    5: .same(proto: "WatchingCount"),
+    6: .same(proto: "InvolvedCount"),
+    7: .same(proto: "Avatar"),
+    8: .same(proto: "visable"),
+    9: .same(proto: "isAchieve"),
+    10: .same(proto: "isClose"),
+    11: .same(proto: "isPrivate"),
+  ]
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularUInt64Field(value: &self.projectID) }()
+      case 2: try { try decoder.decodeSingularUInt32Field(value: &self.groupID) }()
+      case 3: try { try decoder.decodeSingularStringField(value: &self.description_p) }()
+      case 5: try { try decoder.decodeSingularUInt64Field(value: &self.watchingCount) }()
+      case 6: try { try decoder.decodeSingularUInt64Field(value: &self.involvedCount) }()
+      case 7: try { try decoder.decodeSingularStringField(value: &self.avatar) }()
+      case 8: try { try decoder.decodeSingularEnumField(value: &self.visable) }()
+      case 9: try { try decoder.decodeSingularBoolField(value: &self.isAchieve) }()
+      case 10: try { try decoder.decodeSingularBoolField(value: &self.isClose) }()
+      case 11: try { try decoder.decodeSingularBoolField(value: &self.isPrivate) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    if self.projectID != 0 {
+      try visitor.visitSingularUInt64Field(value: self.projectID, fieldNumber: 1)
+    }
+    if self.groupID != 0 {
+      try visitor.visitSingularUInt32Field(value: self.groupID, fieldNumber: 2)
+    }
+    if !self.description_p.isEmpty {
+      try visitor.visitSingularStringField(value: self.description_p, fieldNumber: 3)
+    }
+    if self.watchingCount != 0 {
+      try visitor.visitSingularUInt64Field(value: self.watchingCount, fieldNumber: 5)
+    }
+    if self.involvedCount != 0 {
+      try visitor.visitSingularUInt64Field(value: self.involvedCount, fieldNumber: 6)
+    }
+    if !self.avatar.isEmpty {
+      try visitor.visitSingularStringField(value: self.avatar, fieldNumber: 7)
+    }
+    if self.visable != .allPublic {
+      try visitor.visitSingularEnumField(value: self.visable, fieldNumber: 8)
+    }
+    if self.isAchieve != false {
+      try visitor.visitSingularBoolField(value: self.isAchieve, fieldNumber: 9)
+    }
+    if self.isClose != false {
+      try visitor.visitSingularBoolField(value: self.isClose, fieldNumber: 10)
+    }
+    if self.isPrivate != false {
+      try visitor.visitSingularBoolField(value: self.isPrivate, fieldNumber: 11)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Grapery_Api_ProjectProfileInfo, rhs: Grapery_Api_ProjectProfileInfo) -> Bool {
+    if lhs.projectID != rhs.projectID {return false}
+    if lhs.groupID != rhs.groupID {return false}
+    if lhs.description_p != rhs.description_p {return false}
+    if lhs.watchingCount != rhs.watchingCount {return false}
+    if lhs.involvedCount != rhs.involvedCount {return false}
+    if lhs.avatar != rhs.avatar {return false}
+    if lhs.visable != rhs.visable {return false}
+    if lhs.isAchieve != rhs.isAchieve {return false}
+    if lhs.isClose != rhs.isClose {return false}
+    if lhs.isPrivate != rhs.isPrivate {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
 extension Grapery_Api_ActiveInfo: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
   static let protoMessageName: String = _protobuf_package + ".ActiveInfo"
   static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
@@ -1691,25 +1797,6 @@ extension Grapery_Api_GroupProfileInfo: SwiftProtobuf.Message, SwiftProtobuf._Me
   }
 
   static func ==(lhs: Grapery_Api_GroupProfileInfo, rhs: Grapery_Api_GroupProfileInfo) -> Bool {
-    if lhs.unknownFields != rhs.unknownFields {return false}
-    return true
-  }
-}
-
-extension Grapery_Api_ProjectProfileInfo: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".ProjectProfileInfo"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap()
-
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
-    while let _ = try decoder.nextFieldNumber() {
-    }
-  }
-
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    try unknownFields.traverse(visitor: &visitor)
-  }
-
-  static func ==(lhs: Grapery_Api_ProjectProfileInfo, rhs: Grapery_Api_ProjectProfileInfo) -> Bool {
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
