@@ -13,7 +13,7 @@ struct voyager2048App: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(number: 10)
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }

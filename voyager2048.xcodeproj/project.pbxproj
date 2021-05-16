@@ -10,6 +10,15 @@
 		0F04E18625FAF1CF00F301FF /* SwiftProtobuf in Frameworks */ = {isa = PBXBuildFile; productRef = 0F04E18525FAF1CF00F301FF /* SwiftProtobuf */; };
 		0F04E18825FAF1CF00F301FF /* SwiftProtobufPluginLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 0F04E18725FAF1CF00F301FF /* SwiftProtobufPluginLibrary */; };
 		0F04E18E25FAF27700F301FF /* service.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F04E18D25FAF27700F301FF /* service.pb.swift */; };
+		0F196D1A261B609500C46707 /* login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F196D19261B609500C46707 /* login.swift */; };
+		0F196D1F261B60A700C46707 /* setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F196D1E261B60A700C46707 /* setting.swift */; };
+		0F196D24261B60D400C46707 /* user.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F196D23261B60D400C46707 /* user.swift */; };
+		0F196D29261B60E300C46707 /* group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F196D28261B60E300C46707 /* group.swift */; };
+		0F196D2E261B60EF00C46707 /* project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F196D2D261B60EF00C46707 /* project.swift */; };
+		0F196D33261B610300C46707 /* item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F196D32261B610300C46707 /* item.swift */; };
+		0F196D38261B611600C46707 /* picture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F196D37261B611600C46707 /* picture.swift */; };
+		0F196D3D261B613000C46707 /* shortword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F196D3C261B613000C46707 /* shortword.swift */; };
+		0F196D42261B614600C46707 /* video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F196D41261B614600C46707 /* video.swift */; };
 		0FE211EA25FAED7A003F1044 /* voyager2048App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE211E925FAED7A003F1044 /* voyager2048App.swift */; };
 		0FE211EC25FAED7A003F1044 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE211EB25FAED7A003F1044 /* ContentView.swift */; };
 		0FE211EE25FAED7F003F1044 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FE211ED25FAED7F003F1044 /* Assets.xcassets */; };
@@ -39,6 +48,15 @@
 
 /* Begin PBXFileReference section */
 		0F04E18D25FAF27700F301FF /* service.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = service.pb.swift; sourceTree = "<group>"; };
+		0F196D19261B609500C46707 /* login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = login.swift; sourceTree = "<group>"; };
+		0F196D1E261B60A700C46707 /* setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = setting.swift; sourceTree = "<group>"; };
+		0F196D23261B60D400C46707 /* user.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = user.swift; sourceTree = "<group>"; };
+		0F196D28261B60E300C46707 /* group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = group.swift; sourceTree = "<group>"; };
+		0F196D2D261B60EF00C46707 /* project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = project.swift; sourceTree = "<group>"; };
+		0F196D32261B610300C46707 /* item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = item.swift; sourceTree = "<group>"; };
+		0F196D37261B611600C46707 /* picture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = picture.swift; sourceTree = "<group>"; };
+		0F196D3C261B613000C46707 /* shortword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shortword.swift; sourceTree = "<group>"; };
+		0F196D41261B614600C46707 /* video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = video.swift; sourceTree = "<group>"; };
 		0FE211E625FAED7A003F1044 /* voyager2048.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = voyager2048.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FE211E925FAED7A003F1044 /* voyager2048App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = voyager2048App.swift; sourceTree = "<group>"; };
 		0FE211EB25FAED7A003F1044 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -90,6 +108,36 @@
 			path = api;
 			sourceTree = "<group>";
 		};
+		0F196D17261B600300C46707 /* components */ = {
+			isa = PBXGroup;
+			children = (
+				0F196D23261B60D400C46707 /* user.swift */,
+				0F196D28261B60E300C46707 /* group.swift */,
+				0F196D2D261B60EF00C46707 /* project.swift */,
+				0F196D32261B610300C46707 /* item.swift */,
+				0F196D37261B611600C46707 /* picture.swift */,
+				0F196D3C261B613000C46707 /* shortword.swift */,
+				0F196D41261B614600C46707 /* video.swift */,
+			);
+			path = components;
+			sourceTree = "<group>";
+		};
+		0F196D18261B602900C46707 /* viewui */ = {
+			isa = PBXGroup;
+			children = (
+				0F196D19261B609500C46707 /* login.swift */,
+				0F196D1E261B60A700C46707 /* setting.swift */,
+			);
+			path = viewui;
+			sourceTree = "<group>";
+		};
+		0F196D4F262B15AD00C46707 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
 		0FE211DD25FAED7A003F1044 = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +161,9 @@
 		0FE211E825FAED7A003F1044 /* voyager2048 */ = {
 			isa = PBXGroup;
 			children = (
+				0F196D4F262B15AD00C46707 /* utils */,
+				0F196D18261B602900C46707 /* viewui */,
+				0F196D17261B600300C46707 /* components */,
 				0F04E18C25FAF27700F301FF /* api */,
 				0FE211E925FAED7A003F1044 /* voyager2048App.swift */,
 				0FE211EB25FAED7A003F1044 /* ContentView.swift */,
@@ -240,6 +291,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = 0FE211DD25FAED7A003F1044;
 			packageReferences = (
@@ -288,9 +340,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				0FE211F325FAED7F003F1044 /* Persistence.swift in Sources */,
+				0F196D1A261B609500C46707 /* login.swift in Sources */,
 				0FE211EC25FAED7A003F1044 /* ContentView.swift in Sources */,
+				0F196D42261B614600C46707 /* video.swift in Sources */,
+				0F196D1F261B60A700C46707 /* setting.swift in Sources */,
+				0F196D38261B611600C46707 /* picture.swift in Sources */,
+				0F196D24261B60D400C46707 /* user.swift in Sources */,
+				0F196D33261B610300C46707 /* item.swift in Sources */,
+				0F196D3D261B613000C46707 /* shortword.swift in Sources */,
+				0F196D2E261B60EF00C46707 /* project.swift in Sources */,
 				0F04E18E25FAF27700F301FF /* service.pb.swift in Sources */,
 				0FE211EA25FAED7A003F1044 /* voyager2048App.swift in Sources */,
+				0F196D29261B60E300C46707 /* group.swift in Sources */,
 				0FE211F625FAED7F003F1044 /* voyager2048.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

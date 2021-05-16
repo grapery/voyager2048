@@ -9,15 +9,19 @@ import SwiftUI
 import CoreData
 
 struct ContentView: View {
+    @State  var number: Int
     @Environment(\.managedObjectContext) private var viewContext
 
     @FetchRequest(
         sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
         animation: .default)
     private var items: FetchedResults<Item>
-
+   
     var body: some View {
         List {
+            if items.isEmpty {
+                
+            }
             ForEach(items) { item in
                 Text("Item at \(item.timestamp!, formatter: itemFormatter)")
             }
@@ -31,6 +35,15 @@ struct ContentView: View {
             Button(action: addItem) {
                 Label("Add Item", systemImage: "plus")
             }
+        }
+        ZStack {
+          Circle()
+            .stroke(Color.blue, lineWidth: 4)
+            Text(String(number))
+        }
+        .frame(width: 40, height: 40)
+        .onTapGesture {
+            number = number+1
         }
     }
 
@@ -75,6 +88,6 @@ private let itemFormatter: DateFormatter = {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+        ContentView(number: 10).environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }
