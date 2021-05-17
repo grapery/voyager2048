@@ -693,7 +693,7 @@ struct Grapery_Api_WordDetail {
   init() {}
 }
 
-struct Grapery_Api_PictureDetail {
+struct Grapery_Api_PictureInfo {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
@@ -707,7 +707,21 @@ struct Grapery_Api_PictureDetail {
   init() {}
 }
 
-struct Grapery_Api_VideoDetail {
+struct Grapery_Api_PictureDetail {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  var list: [Grapery_Api_PictureInfo] = []
+
+  var num: UInt64 = 0
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+}
+
+struct Grapery_Api_VideoInfo {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
@@ -717,6 +731,20 @@ struct Grapery_Api_VideoDetail {
   var size: UInt64 = 0
 
   var timeLength: UInt64 = 0
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+}
+
+struct Grapery_Api_VideoDetail {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  var list: [Grapery_Api_VideoInfo] = []
+
+  var num: UInt64 = 0
 
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
@@ -1577,8 +1605,8 @@ extension Grapery_Api_WordDetail: SwiftProtobuf.Message, SwiftProtobuf._MessageI
   }
 }
 
-extension Grapery_Api_PictureDetail: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".PictureDetail"
+extension Grapery_Api_PictureInfo: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".PictureInfo"
   static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "resource_url"),
     2: .same(proto: "size"),
@@ -1607,7 +1635,7 @@ extension Grapery_Api_PictureDetail: SwiftProtobuf.Message, SwiftProtobuf._Messa
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Grapery_Api_PictureDetail, rhs: Grapery_Api_PictureDetail) -> Bool {
+  static func ==(lhs: Grapery_Api_PictureInfo, rhs: Grapery_Api_PictureInfo) -> Bool {
     if lhs.resourceURL != rhs.resourceURL {return false}
     if lhs.size != rhs.size {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
@@ -1615,10 +1643,48 @@ extension Grapery_Api_PictureDetail: SwiftProtobuf.Message, SwiftProtobuf._Messa
   }
 }
 
-extension Grapery_Api_VideoDetail: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".VideoDetail"
+extension Grapery_Api_PictureDetail: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".PictureDetail"
   static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    1: .same(proto: "resourceUrl"),
+    1: .same(proto: "list"),
+    2: .same(proto: "num"),
+  ]
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeRepeatedMessageField(value: &self.list) }()
+      case 2: try { try decoder.decodeSingularUInt64Field(value: &self.num) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    if !self.list.isEmpty {
+      try visitor.visitRepeatedMessageField(value: self.list, fieldNumber: 1)
+    }
+    if self.num != 0 {
+      try visitor.visitSingularUInt64Field(value: self.num, fieldNumber: 2)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Grapery_Api_PictureDetail, rhs: Grapery_Api_PictureDetail) -> Bool {
+    if lhs.list != rhs.list {return false}
+    if lhs.num != rhs.num {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Grapery_Api_VideoInfo: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".VideoInfo"
+  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .standard(proto: "resource_url"),
     2: .same(proto: "size"),
     3: .same(proto: "timeLength"),
   ]
@@ -1650,10 +1716,48 @@ extension Grapery_Api_VideoDetail: SwiftProtobuf.Message, SwiftProtobuf._Message
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Grapery_Api_VideoDetail, rhs: Grapery_Api_VideoDetail) -> Bool {
+  static func ==(lhs: Grapery_Api_VideoInfo, rhs: Grapery_Api_VideoInfo) -> Bool {
     if lhs.resourceURL != rhs.resourceURL {return false}
     if lhs.size != rhs.size {return false}
     if lhs.timeLength != rhs.timeLength {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Grapery_Api_VideoDetail: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".VideoDetail"
+  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .same(proto: "list"),
+    2: .same(proto: "num"),
+  ]
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeRepeatedMessageField(value: &self.list) }()
+      case 2: try { try decoder.decodeSingularUInt64Field(value: &self.num) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    if !self.list.isEmpty {
+      try visitor.visitRepeatedMessageField(value: self.list, fieldNumber: 1)
+    }
+    if self.num != 0 {
+      try visitor.visitSingularUInt64Field(value: self.num, fieldNumber: 2)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Grapery_Api_VideoDetail, rhs: Grapery_Api_VideoDetail) -> Bool {
+    if lhs.list != rhs.list {return false}
+    if lhs.num != rhs.num {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
