@@ -26,6 +26,7 @@
 		0FAD99D72652B6FF0095ACC5 /* view_model.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAD99CF2652B6FF0095ACC5 /* view_model.pb.swift */; };
 		0FAD99D82652B6FF0095ACC5 /* group.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAD99D02652B6FF0095ACC5 /* group.pb.swift */; };
 		0FAD99D92652B6FF0095ACC5 /* comment.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAD99D12652B6FF0095ACC5 /* comment.pb.swift */; };
+		0FAD99DC2652B89B0095ACC5 /* user.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAD99DB2652B89B0095ACC5 /* user.swift */; };
 		0FE211EA25FAED7A003F1044 /* voyager2048App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE211E925FAED7A003F1044 /* voyager2048App.swift */; };
 		0FE211EC25FAED7A003F1044 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE211EB25FAED7A003F1044 /* ContentView.swift */; };
 		0FE211EE25FAED7F003F1044 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FE211ED25FAED7F003F1044 /* Assets.xcassets */; };
@@ -71,6 +72,7 @@
 		0FAD99CF2652B6FF0095ACC5 /* view_model.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = view_model.pb.swift; sourceTree = "<group>"; };
 		0FAD99D02652B6FF0095ACC5 /* group.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = group.pb.swift; sourceTree = "<group>"; };
 		0FAD99D12652B6FF0095ACC5 /* comment.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = comment.pb.swift; sourceTree = "<group>"; };
+		0FAD99DB2652B89B0095ACC5 /* user.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = user.swift; sourceTree = "<group>"; };
 		0FE211E625FAED7A003F1044 /* voyager2048.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = voyager2048.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FE211E925FAED7A003F1044 /* voyager2048App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = voyager2048App.swift; sourceTree = "<group>"; };
 		0FE211EB25FAED7A003F1044 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -159,6 +161,14 @@
 			path = utils;
 			sourceTree = "<group>";
 		};
+		0FAD99DA2652B8780095ACC5 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				0FAD99DB2652B89B0095ACC5 /* user.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
 		0FE211DD25FAED7A003F1044 = {
 			isa = PBXGroup;
 			children = (
@@ -182,6 +192,7 @@
 		0FE211E825FAED7A003F1044 /* voyager2048 */ = {
 			isa = PBXGroup;
 			children = (
+				0FAD99DA2652B8780095ACC5 /* models */,
 				0F196D4F262B15AD00C46707 /* utils */,
 				0F196D18261B602900C46707 /* viewui */,
 				0F196D17261B600300C46707 /* components */,
@@ -380,6 +391,7 @@
 				0F196D29261B60E300C46707 /* group.swift in Sources */,
 				0FAD99D62652B6FF0095ACC5 /* user.pb.swift in Sources */,
 				0FE211F625FAED7F003F1044 /* voyager2048.xcdatamodeld in Sources */,
+				0FAD99DC2652B89B0095ACC5 /* user.swift in Sources */,
 				0FAD99D42652B6FF0095ACC5 /* team.pb.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
