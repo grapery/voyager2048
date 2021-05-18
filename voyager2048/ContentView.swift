@@ -9,85 +9,53 @@ import SwiftUI
 import CoreData
 
 struct ContentView: View {
-    @State  var number: Int
-    @Environment(\.managedObjectContext) private var viewContext
-
-    @FetchRequest(
-        sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
-        animation: .default)
-    private var items: FetchedResults<Item>
-   
+    @ObservedObject var userSession = SessionCntroller()
+    @State private var isLoginPagePresented = false
+    private let isOnboardingWasSkipped = "isOnboardingWasSkipped"
+    
+    init() {
+        userSession.initialSession()
+    }
+    
     var body: some View {
-        List {
-            if items.isEmpty {
-                
-            }
-            ForEach(items) { item in
-                Text("Item at \(item.timestamp!, formatter: itemFormatter)")
-            }
-            .onDelete(perform: deleteItems)
-        }
-        .toolbar {
-            #if os(iOS)
-            EditButton()
-            #endif
-
-            Button(action: addItem) {
-                Label("Add Item", systemImage: "plus")
-            }
-        }
         ZStack {
-          Circle()
-            .stroke(Color.blue, lineWidth: 4)
-            Text(String(number))
-        }
-        .frame(width: 40, height: 40)
-        .onTapGesture {
-            number = number+1
-        }
-    }
-
-    private func addItem() {
-        withAnimation {
-            let newItem = Item(context: viewContext)
-            newItem.timestamp = Date()
-
-            do {
-                try viewContext.save()
-            } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                let nsError = error as NSError
-                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+            if userSession.isValid() {
+                MainPageView(session: userSession).modifier(ScreenModifier())
+            }
+            else {
+                if isOnboardingAlreadyShowing() {
+                    LoginView(session: userSession).modifier(ScreenModifier())
+                }
+                else {
+                    OnboardingView(onSkipped: {
+                        UserDefaults.standard.set(true, forKey: self.isOnboardingWasSkipped)
+                        
+                        withAnimation {
+                            self.isLoginPagePresented = true
+                        }
+                    }).modifier(ScreenModifier())
+                }
             }
         }
     }
 
-    private func deleteItems(offsets: IndexSet) {
-        withAnimation {
-            offsets.map { items[$0] }.forEach(viewContext.delete)
-
-            do {
-                try viewContext.save()
-            } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                let nsError = error as NSError
-                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-            }
+    private func isOnboardingAlreadyShowing() -> Bool {
+        let isOnboardingAlreadyShowing = UserDefaults.standard.bool(forKey: self.isOnboardingWasSkipped)
+        
+        if isOnboardingAlreadyShowing {
+            return true
+        }
+        else {
+            return isLoginPagePresented
         }
     }
 }
 
-private let itemFormatter: DateFormatter = {
-    let formatter = DateFormatter()
-    formatter.dateStyle = .short
-    formatter.timeStyle = .medium
-    return formatter
-}()
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView(number: 10).environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+struct ScreenModifier: ViewModifier {
+    func body(content: Content) -> some View {
+        let appearanceTransition = AnyTransition.asymmetric(insertion: .move(edge: .bottom), removal: .move(edge: .top)) .combined(with: .scale)
+        return content
+            .animation(.spring())
+            .transition(appearanceTransition)
     }
 }

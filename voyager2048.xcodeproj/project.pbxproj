@@ -27,6 +27,7 @@
 		0FAD99D82652B6FF0095ACC5 /* group.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAD99D02652B6FF0095ACC5 /* group.pb.swift */; };
 		0FAD99D92652B6FF0095ACC5 /* comment.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAD99D12652B6FF0095ACC5 /* comment.pb.swift */; };
 		0FAD99DC2652B89B0095ACC5 /* user.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAD99DB2652B89B0095ACC5 /* user.swift */; };
+		0FAD99DF26534ADE0095ACC5 /* mainPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAD99DE26534ADE0095ACC5 /* mainPageView.swift */; };
 		0FE211EA25FAED7A003F1044 /* voyager2048App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE211E925FAED7A003F1044 /* voyager2048App.swift */; };
 		0FE211EC25FAED7A003F1044 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE211EB25FAED7A003F1044 /* ContentView.swift */; };
 		0FE211EE25FAED7F003F1044 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FE211ED25FAED7F003F1044 /* Assets.xcassets */; };
@@ -73,6 +74,7 @@
 		0FAD99D02652B6FF0095ACC5 /* group.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = group.pb.swift; sourceTree = "<group>"; };
 		0FAD99D12652B6FF0095ACC5 /* comment.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = comment.pb.swift; sourceTree = "<group>"; };
 		0FAD99DB2652B89B0095ACC5 /* user.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = user.swift; sourceTree = "<group>"; };
+		0FAD99DE26534ADE0095ACC5 /* mainPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainPageView.swift; sourceTree = "<group>"; };
 		0FE211E625FAED7A003F1044 /* voyager2048.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = voyager2048.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FE211E925FAED7A003F1044 /* voyager2048App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = voyager2048App.swift; sourceTree = "<group>"; };
 		0FE211EB25FAED7A003F1044 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -204,6 +206,7 @@
 				0FE211F725FAED7F003F1044 /* Info.plist */,
 				0FE211F425FAED7F003F1044 /* voyager2048.xcdatamodeld */,
 				0FE211EF25FAED7F003F1044 /* Preview Content */,
+				0FAD99DE26534ADE0095ACC5 /* mainPageView.swift */,
 			);
 			path = voyager2048;
 			sourceTree = "<group>";
@@ -371,6 +374,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FAD99DF26534ADE0095ACC5 /* mainPageView.swift in Sources */,
 				0FE211F325FAED7F003F1044 /* Persistence.swift in Sources */,
 				0FAD99D52652B6FF0095ACC5 /* service.pb.swift in Sources */,
 				0F196D1A261B609500C46707 /* login.swift in Sources */,
