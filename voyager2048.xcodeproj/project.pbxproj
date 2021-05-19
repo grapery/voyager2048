@@ -19,7 +19,6 @@
 		0FAD99D72652B6FF0095ACC5 /* view_model.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAD99CF2652B6FF0095ACC5 /* view_model.pb.swift */; };
 		0FAD99D82652B6FF0095ACC5 /* group.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAD99D02652B6FF0095ACC5 /* group.pb.swift */; };
 		0FAD99D92652B6FF0095ACC5 /* comment.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAD99D12652B6FF0095ACC5 /* comment.pb.swift */; };
-		0FAD99DF26534ADE0095ACC5 /* mainPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAD99DE26534ADE0095ACC5 /* mainPageView.swift */; };
 		0FE211EA25FAED7A003F1044 /* voyager2048App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE211E925FAED7A003F1044 /* voyager2048App.swift */; };
 		0FE211EC25FAED7A003F1044 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE211EB25FAED7A003F1044 /* ContentView.swift */; };
 		0FE211EE25FAED7F003F1044 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FE211ED25FAED7F003F1044 /* Assets.xcassets */; };
@@ -36,6 +35,11 @@
 		ADA9C9EE265394F0005BDC4A /* group.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA9C9E7265394F0005BDC4A /* group.swift */; };
 		ADA9C9EF265394F0005BDC4A /* item.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA9C9E8265394F0005BDC4A /* item.swift */; };
 		ADA9C9F0265394F0005BDC4A /* picture.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA9C9E9265394F0005BDC4A /* picture.swift */; };
+		ADA9C9FA2653D1FE005BDC4A /* userModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA9C9F92653D1FE005BDC4A /* userModel.swift */; };
+		ADA9C9FF2653D2EB005BDC4A /* groupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA9C9FE2653D2EB005BDC4A /* groupModel.swift */; };
+		ADA9CA042653D332005BDC4A /* ItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA9CA032653D332005BDC4A /* ItemModel.swift */; };
+		ADA9CA092653D428005BDC4A /* ProjectModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA9CA082653D428005BDC4A /* ProjectModel.swift */; };
+		ADA9CA1C2653D67A005BDC4A /* helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA9CA1B2653D67A005BDC4A /* helper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,7 +70,6 @@
 		0FAD99CF2652B6FF0095ACC5 /* view_model.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = view_model.pb.swift; sourceTree = "<group>"; };
 		0FAD99D02652B6FF0095ACC5 /* group.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = group.pb.swift; sourceTree = "<group>"; };
 		0FAD99D12652B6FF0095ACC5 /* comment.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = comment.pb.swift; sourceTree = "<group>"; };
-		0FAD99DE26534ADE0095ACC5 /* mainPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainPageView.swift; sourceTree = "<group>"; };
 		0FE211E625FAED7A003F1044 /* voyager2048.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = voyager2048.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FE211E925FAED7A003F1044 /* voyager2048App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = voyager2048App.swift; sourceTree = "<group>"; };
 		0FE211EB25FAED7A003F1044 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -89,6 +92,11 @@
 		ADA9C9E7265394F0005BDC4A /* group.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = group.swift; sourceTree = "<group>"; };
 		ADA9C9E8265394F0005BDC4A /* item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = item.swift; sourceTree = "<group>"; };
 		ADA9C9E9265394F0005BDC4A /* picture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = picture.swift; sourceTree = "<group>"; };
+		ADA9C9F92653D1FE005BDC4A /* userModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userModel.swift; sourceTree = "<group>"; };
+		ADA9C9FE2653D2EB005BDC4A /* groupModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = groupModel.swift; sourceTree = "<group>"; };
+		ADA9CA032653D332005BDC4A /* ItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemModel.swift; sourceTree = "<group>"; };
+		ADA9CA082653D428005BDC4A /* ProjectModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectModel.swift; sourceTree = "<group>"; };
+		ADA9CA1B2653D67A005BDC4A /* helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = helper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +161,7 @@
 			children = (
 				0F196D19261B609500C46707 /* login.swift */,
 				0F196D1E261B60A700C46707 /* setting.swift */,
+				ADA9CA1B2653D67A005BDC4A /* helper.swift */,
 			);
 			path = viewui;
 			sourceTree = "<group>";
@@ -160,6 +169,10 @@
 		0FAD99DA2652B8780095ACC5 /* models */ = {
 			isa = PBXGroup;
 			children = (
+				ADA9C9F92653D1FE005BDC4A /* userModel.swift */,
+				ADA9C9FE2653D2EB005BDC4A /* groupModel.swift */,
+				ADA9CA032653D332005BDC4A /* ItemModel.swift */,
+				ADA9CA082653D428005BDC4A /* ProjectModel.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -192,13 +205,13 @@
 				0F196D17261B600300C46707 /* components */,
 				0F04E18C25FAF27700F301FF /* api */,
 				0FE211E925FAED7A003F1044 /* voyager2048App.swift */,
+				ADA9CA122653D487005BDC4A /* controller */,
 				0FE211EB25FAED7A003F1044 /* ContentView.swift */,
 				0FE211ED25FAED7F003F1044 /* Assets.xcassets */,
 				0FE211F225FAED7F003F1044 /* Persistence.swift */,
 				0FE211F725FAED7F003F1044 /* Info.plist */,
 				0FE211F425FAED7F003F1044 /* voyager2048.xcdatamodeld */,
 				0FE211EF25FAED7F003F1044 /* Preview Content */,
-				0FAD99DE26534ADE0095ACC5 /* mainPageView.swift */,
 			);
 			path = voyager2048;
 			sourceTree = "<group>";
@@ -235,6 +248,13 @@
 				ADA9C9D626536770005BDC4A /* colorExt.swift */,
 			);
 			path = extenions;
+			sourceTree = "<group>";
+		};
+		ADA9CA122653D487005BDC4A /* controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -374,8 +394,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0FAD99DF26534ADE0095ACC5 /* mainPageView.swift in Sources */,
 				ADA9C9EA265394F0005BDC4A /* project.swift in Sources */,
+				ADA9CA042653D332005BDC4A /* ItemModel.swift in Sources */,
+				ADA9CA1C2653D67A005BDC4A /* helper.swift in Sources */,
+				ADA9C9FA2653D1FE005BDC4A /* userModel.swift in Sources */,
 				0FE211F325FAED7F003F1044 /* Persistence.swift in Sources */,
 				0FAD99D52652B6FF0095ACC5 /* service.pb.swift in Sources */,
 				ADA9C9F0265394F0005BDC4A /* picture.swift in Sources */,
@@ -383,6 +405,7 @@
 				0F196D1A261B609500C46707 /* login.swift in Sources */,
 				ADA9C9EE265394F0005BDC4A /* group.swift in Sources */,
 				0FE211EC25FAED7A003F1044 /* ContentView.swift in Sources */,
+				ADA9CA092653D428005BDC4A /* ProjectModel.swift in Sources */,
 				ADA9C9EC265394F0005BDC4A /* shortword.swift in Sources */,
 				0FAD99D32652B6FF0095ACC5 /* project.pb.swift in Sources */,
 				0FAD99D92652B6FF0095ACC5 /* comment.pb.swift in Sources */,
@@ -394,6 +417,7 @@
 				0FAD99D22652B6FF0095ACC5 /* item.pb.swift in Sources */,
 				0FAD99D72652B6FF0095ACC5 /* view_model.pb.swift in Sources */,
 				0FE211EA25FAED7A003F1044 /* voyager2048App.swift in Sources */,
+				ADA9C9FF2653D2EB005BDC4A /* groupModel.swift in Sources */,
 				0FAD99D62652B6FF0095ACC5 /* user.pb.swift in Sources */,
 				0FE211F625FAED7F003F1044 /* voyager2048.xcdatamodeld in Sources */,
 				0FAD99D42652B6FF0095ACC5 /* team.pb.swift in Sources */,
