@@ -1,20 +1,20 @@
 //
-//  shortword.swift
+//  ExploreUIView.swift
 //  voyager2048
 //
-//  Created by grapestree on 2021/4/5.
+//  Created by grapestree on 2021/5/19.
 //
 
 import SwiftUI
 
-struct shortword: View {
+struct ExploreUIView: View {
     var body: some View {
         Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
 }
 
-struct shortword_Previews: PreviewProvider {
+struct ExploreUIView_Previews: PreviewProvider {
     static var previews: some View {
-        shortword()
+        ExploreUIView()
     }
 }

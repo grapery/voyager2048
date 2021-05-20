@@ -14,72 +14,75 @@ struct GraperyApp: View {
     var body: some View {
             NavigationView {
                 TabView(selection: $selection) {
-                    Login()
-                        .tabItem { Item(type: .chat, selection: selection) }
-                        .tag(ItemType.chat.rawValue)
-                    Login()
-                        .tabItem { Item(type: .contact, selection: selection) }
-                        .tag(ItemType.contact.rawValue)
-                    Login()
-                        .tabItem { Item(type: .discover, selection: selection) }
-                        .tag(ItemType.discover.rawValue)
-                    Login()
-                        .tabItem { Item(type: .me, selection: selection) }
-                        .tag(ItemType.me.rawValue)
+                    UserUIView()
+                        .tabItem { Item(type: .You, selection: selection) }
+                        .tag(ItemType.You.rawValue)
+                    ExploreUIView()
+                        .tabItem { Item(type: .Explore, selection: selection) }
+                        .tag(ItemType.Explore.rawValue)
+                    GroupUIView()
+                        .tabItem { Item(type: .Org, selection: selection) }
+                        .tag(ItemType.Org.rawValue)
+                    FriendsUIView()
+                        .tabItem { Item(type: .Friends, selection: selection) }
+                        .tag(ItemType.Friends.rawValue)
                 }
                 .navigationBarHidden(itemType.isNavigationBarHidden(selection: selection))
                 .navigationBarTitle(itemType.title, displayMode: .inline)
                 .navigationBarItems(trailing: itemType.navigationBarTrailingItems(selection: selection))
+                .accentColor(Color.blue)
+                .foregroundColor(Color.green)
             }
         }
         
         enum ItemType: Int {
-            case chat
-            case contact
-            case discover
-            case me
+            case You
+            case Explore
+            case Org
+            case Friends
             
             var image: Image {
                 switch self {
-                case .chat:     return Image("root_tab_chat")
-                case .contact:  return Image("root_tab_contact")
-                case .discover: return Image("root_tab_discover")
-                case .me:       return Image("root_tab_me")
+                case .You:     return Image(".you")
+                case .Explore:  return Image(".explore")
+                case .Org: return Image(".group")
+                case .Friends:       return Image(".friends")
                 }
             }
             
             var selectedImage: Image {
                 switch self {
-                case .chat:     return Image("root_tab_chat_selected")
-                case .contact:  return Image("root_tab_contact_selected")
-                case .discover: return Image("root_tab_discover_selected")
-                case .me:       return Image("root_tab_me_selected")
+                case .You:     return Image(".you_selected")
+                case .Explore:  return Image("explore_selected")
+                case .Org: return Image(".group_selected")
+                case .Friends:       return Image(".friends_selected")
                 }
             }
             
             var title: String {
                 switch self {
-                case .chat:     return "微信"
-                case .contact:  return "通讯录"
-                case .discover: return "发现"
-                case .me:       return "我"
+                case .You:              return "You"
+                case .Explore:          return "Explore"
+                case .Org:              return "Org"
+                case .Friends:          return "Friends"
                 }
             }
             
             func isNavigationBarHidden(selection: Int) -> Bool {
-                selection == ItemType.me.rawValue
+                //selection == ItemType.Friends.rawValue
+                return false
             }
             
             func navigationBarTrailingItems(selection: Int) -> AnyView {
                 switch ItemType(rawValue: selection)! {
-                case .chat:
+                case .You:
                     return AnyView(Image(systemName: "plus.circle"))
-                case .contact:
+                case .Explore:
                     return AnyView(Image(systemName: "person.badge.plus"))
-                case .discover:
-                    return AnyView(EmptyView())
-                case .me:
-                    return AnyView(EmptyView())
+                case .Org:
+                    return AnyView(Image(systemName: "team.circle"))
+                case .Friends:
+                    return AnyView(Image(systemName: "person.friend"))
                 }
             }
         }
