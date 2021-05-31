@@ -69,7 +69,6 @@ struct GraperyApp: View {
             }
             
             func isNavigationBarHidden(selection: Int) -> Bool {
-                //selection == ItemType.Friends.rawValue
                 return false
             }
             

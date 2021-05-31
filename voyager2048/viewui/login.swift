@@ -9,11 +9,22 @@ import SwiftUI
 
 
 struct Login: View {
+    @State var email = ""
+    @State var password = ""
+
     var body: some View {
-        CircleImage().offset(x: 0, y: -100)
-            .padding(.bottom, -130)
-            .padding(40).foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
-                    
+        VStack {
+            TextField("Email", text: $email)
+            SecureField("Password", text: $password)
+            Button(action: { login() }) {
+                Text("Sign in")
+            }
+        }
+        .padding()
+    }
+
+    func login() {
+        print("\(email)")
     }
 }
 
