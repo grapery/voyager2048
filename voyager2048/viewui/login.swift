@@ -21,6 +21,8 @@ struct Login: View {
             }
         }
         .padding()
+        Spacer()
+        GroupUIView()
     }
 
     func login() {
