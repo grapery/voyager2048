@@ -11,6 +11,7 @@
 		0F04E18825FAF1CF00F301FF /* SwiftProtobufPluginLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 0F04E18725FAF1CF00F301FF /* SwiftProtobufPluginLibrary */; };
 		0F196D1A261B609500C46707 /* login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F196D19261B609500C46707 /* login.swift */; };
 		0F196D1F261B60A700C46707 /* setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F196D1E261B60A700C46707 /* setting.swift */; };
+		0FA90EAB26F4204100CD9355 /* welcom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA90EAA26F4204100CD9355 /* welcom.swift */; };
 		0FAD99D22652B6FF0095ACC5 /* item.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAD99CA2652B6FE0095ACC5 /* item.pb.swift */; };
 		0FAD99D32652B6FF0095ACC5 /* project.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAD99CB2652B6FE0095ACC5 /* project.pb.swift */; };
 		0FAD99D42652B6FF0095ACC5 /* team.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAD99CC2652B6FE0095ACC5 /* team.pb.swift */; };
@@ -59,6 +60,7 @@
 /* Begin PBXFileReference section */
 		0F196D19261B609500C46707 /* login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = login.swift; sourceTree = "<group>"; };
 		0F196D1E261B60A700C46707 /* setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = setting.swift; sourceTree = "<group>"; };
+		0FA90EAA26F4204100CD9355 /* welcom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = welcom.swift; sourceTree = "<group>"; };
 		0FAD99CA2652B6FE0095ACC5 /* item.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = item.pb.swift; sourceTree = "<group>"; };
 		0FAD99CB2652B6FE0095ACC5 /* project.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = project.pb.swift; sourceTree = "<group>"; };
 		0FAD99CC2652B6FE0095ACC5 /* team.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = team.pb.swift; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 				0F196D19261B609500C46707 /* login.swift */,
 				0F196D1E261B60A700C46707 /* setting.swift */,
 				ADA9CA1B2653D67A005BDC4A /* helper.swift */,
+				0FA90EAA26F4204100CD9355 /* welcom.swift */,
 			);
 			path = viewui;
 			sourceTree = "<group>";
@@ -406,6 +409,7 @@
 				0FAD99D82652B6FF0095ACC5 /* group.pb.swift in Sources */,
 				ADA9C9D726536770005BDC4A /* colorExt.swift in Sources */,
 				0F196D1F261B60A700C46707 /* setting.swift in Sources */,
+				0FA90EAB26F4204100CD9355 /* welcom.swift in Sources */,
 				0FAD99D22652B6FF0095ACC5 /* item.pb.swift in Sources */,
 				0FAD99E226555FBC0095ACC5 /* GroupUIView.swift in Sources */,
 				0FAD99D72652B6FF0095ACC5 /* view_model.pb.swift in Sources */,

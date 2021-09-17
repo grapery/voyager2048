@@ -19,6 +19,7 @@ struct GraperyApp: View {
                             Item(type: .You, selection: selection)
                         }
                         .tag(ItemType.You.rawValue)
+                        .accentColor(Color.blue)
                     ExploreUIView()
                         .tabItem {
                             Item(type: .Explore, selection: selection)
