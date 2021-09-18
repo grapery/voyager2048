@@ -13,5 +13,3 @@ struct GroupModel: Hashable, Codable, Identifiable {
     var title: String
     var description: String
 }
-
-let groupData:[GroupModel] = load("group.json")

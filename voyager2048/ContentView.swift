@@ -7,6 +7,64 @@
 
 import SwiftUI
 import CoreData
+import Combine
+
+class UserSetting:ObservableObject {
+    @Published var Islogin:Bool = false
+}
+
+class UserOnBoard: ObservableObject{
+    @Published var IsOnBoard: Bool = false
+}
+
+@propertyWrapper
+struct UserDefault<T> {
+    
+    let key: String
+    let defaultValue: T
+    
+    var wrappedValue: T {
+        
+        get {
+            return UserDefaults.standard.object(forKey: key) as? T ?? defaultValue
+        } set {
+            UserDefaults.standard.set(newValue, forKey: key)
+        }
+    }
+}
+
+final class DataStore: ObservableObject {
+    
+    let didChange = PassthroughSubject<DataStore, Never>()
+    
+    @Published var login: Bool = false
+    
+    @UserDefault(key: "Islogin", defaultValue: false)
+    var loggedIn: Bool {
+        didSet {
+            didChange.send(self)
+            self.login = self.loggedIn
+        }
+    }
+}
+
+
+final class DataOnboarding: ObservableObject {
+    
+    let didChange = PassthroughSubject<DataOnboarding, Never>()
+    
+    @Published var onboard: Bool = false
+    
+    @UserDefault(key: "IsOnBoard", defaultValue: false)
+    var onboardComlete: Bool {
+        didSet {
+            didChange.send(self)
+            self.onboard = self.onboardComlete
+        }
+    }
+}
+
+
 
 struct GraperyApp: View {
     @State private var selection: Int = 0

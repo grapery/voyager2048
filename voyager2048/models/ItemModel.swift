@@ -14,5 +14,3 @@ struct ItemModel: Hashable, Codable, Identifiable {
     var title: String
     var description: String
 }
-
-let itemData:[ItemModel] = load("Item.json")

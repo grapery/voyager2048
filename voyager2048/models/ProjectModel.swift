@@ -13,5 +13,3 @@ struct ProjectModel: Hashable, Codable, Identifiable {
     var title: String
     var description: String
 }
-
-let projectData:[ProjectModel] = load("project.json")
