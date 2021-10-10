@@ -130,6 +130,8 @@ enum Grapery_Api_UserStatus: SwiftProtobuf.Enum {
   case study // = 1
   case busy // = 2
   case working // = 3
+  case invisible // = 4
+  case idle // = 5
   case UNRECOGNIZED(Int)
 
   init() {
@@ -142,6 +144,8 @@ enum Grapery_Api_UserStatus: SwiftProtobuf.Enum {
     case 1: self = .study
     case 2: self = .busy
     case 3: self = .working
+    case 4: self = .invisible
+    case 5: self = .idle
     default: self = .UNRECOGNIZED(rawValue)
     }
   }
@@ -152,6 +156,8 @@ enum Grapery_Api_UserStatus: SwiftProtobuf.Enum {
     case .study: return 1
     case .busy: return 2
     case .working: return 3
+    case .invisible: return 4
+    case .idle: return 5
     case .UNRECOGNIZED(let i): return i
     }
   }
@@ -167,6 +173,8 @@ extension Grapery_Api_UserStatus: CaseIterable {
     .study,
     .busy,
     .working,
+    .invisible,
+    .idle,
   ]
 }
 
@@ -935,6 +943,14 @@ struct Grapery_Api_UserProfileInfo {
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
+  var userID: Int64 = 0
+
+  var ctime: Int64 = 0
+
+  var description_p: String = String()
+
+  var avatar: String = String()
+
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
   init() {}
@@ -944,6 +960,30 @@ struct Grapery_Api_GroupProfileInfo {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
+
+  var groupID: Int64 = 0
+
+  var mtime: Int64 = 0
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+}
+
+struct Grapery_Api_TeamInfo {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  var groupID: Int64 = 0
+
+  var name: String = String()
+
+  var description_p: String = String()
+
+  var ctime: Int64 = 0
+
+  var count: Int64 = 0
 
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
@@ -978,6 +1018,8 @@ extension Grapery_Api_UserStatus: SwiftProtobuf._ProtoNameProviding {
     1: .same(proto: "Study"),
     2: .same(proto: "Busy"),
     3: .same(proto: "Working"),
+    4: .same(proto: "Invisible"),
+    5: .same(proto: "Idle"),
   ]
 }
 
@@ -2064,18 +2106,49 @@ extension Grapery_Api_ItemInfo: SwiftProtobuf.Message, SwiftProtobuf._MessageImp
 
 extension Grapery_Api_UserProfileInfo: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
   static let protoMessageName: String = _protobuf_package + ".UserProfileInfo"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap()
+  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .standard(proto: "user_id"),
+    2: .same(proto: "Ctime"),
+    3: .same(proto: "Description"),
+    4: .same(proto: "avatar"),
+  ]
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
-    while let _ = try decoder.nextFieldNumber() {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularInt64Field(value: &self.userID) }()
+      case 2: try { try decoder.decodeSingularInt64Field(value: &self.ctime) }()
+      case 3: try { try decoder.decodeSingularStringField(value: &self.description_p) }()
+      case 4: try { try decoder.decodeSingularStringField(value: &self.avatar) }()
+      default: break
+      }
     }
   }
 
   func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    if self.userID != 0 {
+      try visitor.visitSingularInt64Field(value: self.userID, fieldNumber: 1)
+    }
+    if self.ctime != 0 {
+      try visitor.visitSingularInt64Field(value: self.ctime, fieldNumber: 2)
+    }
+    if !self.description_p.isEmpty {
+      try visitor.visitSingularStringField(value: self.description_p, fieldNumber: 3)
+    }
+    if !self.avatar.isEmpty {
+      try visitor.visitSingularStringField(value: self.avatar, fieldNumber: 4)
+    }
     try unknownFields.traverse(visitor: &visitor)
   }
 
   static func ==(lhs: Grapery_Api_UserProfileInfo, rhs: Grapery_Api_UserProfileInfo) -> Bool {
+    if lhs.userID != rhs.userID {return false}
+    if lhs.ctime != rhs.ctime {return false}
+    if lhs.description_p != rhs.description_p {return false}
+    if lhs.avatar != rhs.avatar {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
@@ -2083,18 +2156,93 @@ extension Grapery_Api_UserProfileInfo: SwiftProtobuf.Message, SwiftProtobuf._Mes
 
 extension Grapery_Api_GroupProfileInfo: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
   static let protoMessageName: String = _protobuf_package + ".GroupProfileInfo"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap()
+  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .standard(proto: "group_id"),
+    2: .same(proto: "Mtime"),
+  ]
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
-    while let _ = try decoder.nextFieldNumber() {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularInt64Field(value: &self.groupID) }()
+      case 2: try { try decoder.decodeSingularInt64Field(value: &self.mtime) }()
+      default: break
+      }
     }
   }
 
   func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    if self.groupID != 0 {
+      try visitor.visitSingularInt64Field(value: self.groupID, fieldNumber: 1)
+    }
+    if self.mtime != 0 {
+      try visitor.visitSingularInt64Field(value: self.mtime, fieldNumber: 2)
+    }
     try unknownFields.traverse(visitor: &visitor)
   }
 
   static func ==(lhs: Grapery_Api_GroupProfileInfo, rhs: Grapery_Api_GroupProfileInfo) -> Bool {
+    if lhs.groupID != rhs.groupID {return false}
+    if lhs.mtime != rhs.mtime {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Grapery_Api_TeamInfo: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".TeamInfo"
+  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .standard(proto: "group_id"),
+    2: .same(proto: "name"),
+    3: .same(proto: "Description"),
+    4: .same(proto: "Ctime"),
+    5: .same(proto: "count"),
+  ]
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularInt64Field(value: &self.groupID) }()
+      case 2: try { try decoder.decodeSingularStringField(value: &self.name) }()
+      case 3: try { try decoder.decodeSingularStringField(value: &self.description_p) }()
+      case 4: try { try decoder.decodeSingularInt64Field(value: &self.ctime) }()
+      case 5: try { try decoder.decodeSingularInt64Field(value: &self.count) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    if self.groupID != 0 {
+      try visitor.visitSingularInt64Field(value: self.groupID, fieldNumber: 1)
+    }
+    if !self.name.isEmpty {
+      try visitor.visitSingularStringField(value: self.name, fieldNumber: 2)
+    }
+    if !self.description_p.isEmpty {
+      try visitor.visitSingularStringField(value: self.description_p, fieldNumber: 3)
+    }
+    if self.ctime != 0 {
+      try visitor.visitSingularInt64Field(value: self.ctime, fieldNumber: 4)
+    }
+    if self.count != 0 {
+      try visitor.visitSingularInt64Field(value: self.count, fieldNumber: 5)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Grapery_Api_TeamInfo, rhs: Grapery_Api_TeamInfo) -> Bool {
+    if lhs.groupID != rhs.groupID {return false}
+    if lhs.name != rhs.name {return false}
+    if lhs.description_p != rhs.description_p {return false}
+    if lhs.ctime != rhs.ctime {return false}
+    if lhs.count != rhs.count {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
