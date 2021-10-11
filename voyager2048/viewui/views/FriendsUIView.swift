@@ -8,20 +8,24 @@
 import SwiftUI
 
 struct FriendsUIView: View {
-    @State var friendlist  = [FrienInfo]()
+    var friendlist:[FrienInfo] = [
+        FrienInfo(id: 1, Name: "init", Avator: "init", Status: 1),
+        FrienInfo(id: 2, Name: "init2", Avator: "init2", Status: 1),
+    ]
     init(){
-        self.friendlist = [
-            FrienInfo(id: ObjectIdentifier, Name: "init", Avator: "init", Status: 1)
-        ]
+        print("firend list view :num ",self.friendlist.count)
     }
     var body: some View {
         ZStack{
             VStack{
-                ForEach(friendlist) { e in
-                    FriendsInfoView(name: e.Name,avator: e.Avator,status: e.Status)
+                List{
+                    ForEach(friendlist) { e in
+                        FriendsInfoView(name: e.Name,avator: e.Avator,status: e.Status)
+                    }
                 }
             }
         }
+        .edgesIgnoringSafeArea(.all)
     }
 }
 
@@ -33,17 +37,16 @@ struct FriendsUIView_Previews: PreviewProvider {
 
 
 struct FrienInfo: Identifiable{
-    var id: ObjectIdentifier
-    
-    var  Name:String
-    var  Avator:String
-    var  Status:Int64
+    var  id: Int64
+    var  Name: String
+    var  Avator: String
+    var  Status: Int64
 }
 
 struct FriendsInfoView: View{
-    var  Name:String
-    var  Avator:String
-    var  Status:Int64
+    var  Name: String
+    var  Avator: String
+    var  Status: Int64
     
     init(name: String,avator: String,status:Int64) {
         self.Name = name
@@ -52,8 +55,11 @@ struct FriendsInfoView: View{
     }
     
     var body: some View {
-                HStack {
-                    Image(uiImage: #imageLiteral(resourceName: "apple"))
+                HStack (
+                    alignment: .top,
+                    spacing: 4.0
+                ){
+                    Image("icon")
                         .padding(.horizontal)
                         .onTapGesture {
                             print("Tap \(Name)")
@@ -66,5 +72,6 @@ struct FriendsInfoView: View{
         
     }
 }
+
 
 

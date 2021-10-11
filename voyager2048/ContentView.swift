@@ -68,7 +68,7 @@ final class DataOnboarding: ObservableObject {
 
 struct GraperyApp: View {
     @State private var selection: Int = 0
-    
+    @State private var islogin: Bool = false
     var body: some View {
             NavigationView {
                 TabView(selection: $selection) {
