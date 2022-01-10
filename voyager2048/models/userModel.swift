@@ -8,8 +8,13 @@
 import Foundation
 
 struct UserModel: Hashable, Codable, Identifiable {
-    var id: Int
+    var id: String
     var thumbnail: String
     var title: String
     var description: String
+    var email: String
+}
+
+struct SessionUserDetails {
+    let email: String
 }

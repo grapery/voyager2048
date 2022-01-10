@@ -7,80 +7,85 @@
 
 import SwiftUI
 
-struct SignInScreenView: View {
-    @State private var email: String = "" // by default it's empty
-    var body: some View {
-        ZStack {
-            Color("BgColor").edgesIgnoringSafeArea(.all)
-            VStack {
-                Spacer()
-                
-                VStack {
-                    Text("Sign In")
-                        .font(.largeTitle)
-                        .fontWeight(.bold)
-                        .padding(.bottom, 30)
-                    
-                    SocalLoginButton(image: Image(uiImage: #imageLiteral(resourceName: "apple")), text: Text("Sign in with Apple"))
-                    
-                    SocalLoginButton(image: Image(uiImage: #imageLiteral(resourceName: "google")), text: Text("Sign in with Google").foregroundColor(Color("PrimaryColor")))
-                        .padding(.vertical)
-                    
-                    Text("or get a link emailed to you")
-                        .foregroundColor(Color.black.opacity(0.4))
-                    
-                    TextField("Work email address", text: $email)
-                        .font(.title3)
-                        .padding()
-                        .frame(maxWidth: .infinity)
-                        .background(Color.white)
-                        .cornerRadius(50.0)
-                        .shadow(color: Color.black.opacity(0.08), radius: 60, x: /*@START_MENU_TOKEN@*/0.0/*@END_MENU_TOKEN@*/, y: 16)
-                        .padding(.vertical)
-                    
-                    PrimaryButton(title: "Email me a signup link")
-                    
-                }
-                
-                Spacer()
-                Divider()
-                Spacer()
-                Text("You are completely safe.")
-                Text("Read our Terms & Conditions.")
-                    .foregroundColor(Color("PrimaryColor"))
-                Spacer()
-                
-            }
-            .padding()
-        }
-    }
-}
-
-struct SignInScreenView_Previews: PreviewProvider {
-    static var previews: some View {
-        SignInScreenView()
-    }
-}
-
-
-struct SocalLoginButton: View {
-    var image: Image
-    var text: Text
+struct LoginView: View {
+    @State var showRegistration: Bool = false
+    @State var showResetPasswordView: Bool = false
+    
+    @StateObject var vm: LoginViewModel = LoginViewModel(authenticationService:
+                                                            FakeAuthService())
     
     var body: some View {
-        HStack {
-            image
-                .padding(.horizontal)
-            Spacer()
-            text
-                .font(.title2)
-            Spacer()
+        NavigationView {
+            ZStack {
+                Color.theme.background.ignoresSafeArea()
+                VStack {
+                    logo
+                    VStack(spacing: 20) {
+                        InputTextFieldView(text: $vm.email, placeholder: "E-mail", keyboardType: .emailAddress)
+                        InputPasswordView(text: $vm.password, placeholder: "Password")
+                        HStack() {
+                            Spacer()
+                            forgotPasswordButton
+                        }
+                        VStack(spacing: 20) {
+                            loginButton
+                            registerButton
+                        }.padding(EdgeInsets(top: 10, leading: 0, bottom: 0, trailing: 0))
+                    }
+                    .sheet(isPresented: $showRegistration, content: {
+                        NavigationView {
+                            RegisterView()
+                                .accessibilityIdentifier("RegisterView")
+                        }
+                    })
+                    .sheet(isPresented: $showResetPasswordView, content: {
+                        NavigationView {
+                            ResetPasswordView()
+                                .accessibilityIdentifier("ForgotPasswordView")
+                        }
+                    })
+                    .font(.headline)
+                    .foregroundColor(Color.theme.accent)
+                    .padding()
+                }
+            }
         }
-        .padding()
-        .frame(maxWidth: .infinity)
-        .background(Color.white)
-        .cornerRadius(50.0)
-        .shadow(color: Color.black.opacity(0.08), radius: 60, x: /*@START_MENU_TOKEN@*/0.0/*@END_MENU_TOKEN@*/, y: 16)
+        .navigationTitle("Login")
+        .alert(isPresented: $vm.hasError, content: {
+            if case .failed(let error) = vm.state {
+                return Alert(title: Text("Error"), message: Text(error.localizedDescription))
+            } else {
+                return Alert(title: Text("Error"), message: Text("Something went wrong"))
+            }
+        })
     }
 }
 
+
+extension LoginView {
+    private var logo: some View {
+        Image("logo-transparent")
+            .resizable()
+            .frame(width: 100, height: 100)
+    }
+    
+    private var loginButton: some View {
+        ButtonView(label: "Login") {
+            vm.login()
+        }
+    }
+    
+    private var registerButton: some View {
+        ButtonView(label: "Register") {
+            showRegistration.toggle()
+        }
+    }
+    
+    private var forgotPasswordButton: some View {
+        Button(action: {
+            showResetPasswordView.toggle()
+        }, label: {
+            Text("Forgot password?")
+        })
+    }
+}

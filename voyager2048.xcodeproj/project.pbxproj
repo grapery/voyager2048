@@ -11,6 +11,16 @@
 		0F04E18825FAF1CF00F301FF /* SwiftProtobufPluginLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 0F04E18725FAF1CF00F301FF /* SwiftProtobufPluginLibrary */; };
 		0F196D1A261B609500C46707 /* login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F196D19261B609500C46707 /* login.swift */; };
 		0F196D1F261B60A700C46707 /* setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F196D1E261B60A700C46707 /* setting.swift */; };
+		0F76BC84278B22A900FF68D8 /* NetWorkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F76BC83278B22A800FF68D8 /* NetWorkManager.swift */; };
+		0F76BC86278B230300FF68D8 /* LocalFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F76BC85278B230300FF68D8 /* LocalFileManager.swift */; };
+		0F76BC89278B24BD00FF68D8 /* sessions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F76BC88278B24BD00FF68D8 /* sessions.swift */; };
+		0F76BC8C278B29A900FF68D8 /* ResetPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F76BC8B278B29A900FF68D8 /* ResetPasswordViewModel.swift */; };
+		0F76BC8E278B2B0E00FF68D8 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F76BC8D278B2B0E00FF68D8 /* LoginViewModel.swift */; };
+		0F76BC90278B2B3800FF68D8 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F76BC8F278B2B3800FF68D8 /* RegisterViewModel.swift */; };
+		0F76BC92278B2C7E00FF68D8 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F76BC91278B2C7E00FF68D8 /* Color.swift */; };
+		0F76BC94278BB54E00FF68D8 /* register.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F76BC93278BB54E00FF68D8 /* register.swift */; };
+		0F76BC97278BB5D200FF68D8 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F76BC96278BB5D200FF68D8 /* ButtonView.swift */; };
+		0F76BC99278BBB8C00FF68D8 /* ResetPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F76BC98278BBB8C00FF68D8 /* ResetPassword.swift */; };
 		0FA90EAB26F4204100CD9355 /* welcom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA90EAA26F4204100CD9355 /* welcom.swift */; };
 		0FAD99D22652B6FF0095ACC5 /* item.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAD99CA2652B6FE0095ACC5 /* item.pb.swift */; };
 		0FAD99D32652B6FF0095ACC5 /* project.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAD99CB2652B6FE0095ACC5 /* project.pb.swift */; };
@@ -32,7 +42,6 @@
 		0FE211F625FAED7F003F1044 /* voyager2048.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0FE211F425FAED7F003F1044 /* voyager2048.xcdatamodeld */; };
 		0FE2120125FAED80003F1044 /* voyager2048Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE2120025FAED80003F1044 /* voyager2048Tests.swift */; };
 		0FE2120C25FAED80003F1044 /* voyager2048UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE2120B25FAED80003F1044 /* voyager2048UITests.swift */; };
-		ADA9C9D726536770005BDC4A /* colorExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA9C9D626536770005BDC4A /* colorExt.swift */; };
 		ADA9C9FA2653D1FE005BDC4A /* userModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA9C9F92653D1FE005BDC4A /* userModel.swift */; };
 		ADA9C9FF2653D2EB005BDC4A /* groupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA9C9FE2653D2EB005BDC4A /* groupModel.swift */; };
 		ADA9CA042653D332005BDC4A /* ItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA9CA032653D332005BDC4A /* ItemModel.swift */; };
@@ -60,6 +69,16 @@
 /* Begin PBXFileReference section */
 		0F196D19261B609500C46707 /* login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = login.swift; sourceTree = "<group>"; };
 		0F196D1E261B60A700C46707 /* setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = setting.swift; sourceTree = "<group>"; };
+		0F76BC83278B22A800FF68D8 /* NetWorkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetWorkManager.swift; sourceTree = "<group>"; };
+		0F76BC85278B230300FF68D8 /* LocalFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFileManager.swift; sourceTree = "<group>"; };
+		0F76BC88278B24BD00FF68D8 /* sessions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sessions.swift; sourceTree = "<group>"; };
+		0F76BC8B278B29A900FF68D8 /* ResetPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewModel.swift; sourceTree = "<group>"; };
+		0F76BC8D278B2B0E00FF68D8 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		0F76BC8F278B2B3800FF68D8 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		0F76BC91278B2C7E00FF68D8 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		0F76BC93278BB54E00FF68D8 /* register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = register.swift; sourceTree = "<group>"; };
+		0F76BC96278BB5D200FF68D8 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
+		0F76BC98278BBB8C00FF68D8 /* ResetPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPassword.swift; sourceTree = "<group>"; };
 		0FA90EAA26F4204100CD9355 /* welcom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = welcom.swift; sourceTree = "<group>"; };
 		0FAD99CA2652B6FE0095ACC5 /* item.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = item.pb.swift; sourceTree = "<group>"; };
 		0FAD99CB2652B6FE0095ACC5 /* project.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = project.pb.swift; sourceTree = "<group>"; };
@@ -87,7 +106,6 @@
 		0FE2120725FAED80003F1044 /* voyager2048UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = voyager2048UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FE2120B25FAED80003F1044 /* voyager2048UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = voyager2048UITests.swift; sourceTree = "<group>"; };
 		0FE2120D25FAED80003F1044 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		ADA9C9D626536770005BDC4A /* colorExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = colorExt.swift; sourceTree = "<group>"; };
 		ADA9C9F92653D1FE005BDC4A /* userModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userModel.swift; sourceTree = "<group>"; };
 		ADA9C9FE2653D2EB005BDC4A /* groupModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = groupModel.swift; sourceTree = "<group>"; };
 		ADA9CA032653D332005BDC4A /* ItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemModel.swift; sourceTree = "<group>"; };
@@ -137,14 +155,6 @@
 			path = api;
 			sourceTree = "<group>";
 		};
-		0F196D17261B600300C46707 /* components */ = {
-			isa = PBXGroup;
-			children = (
-				ADA9C9D526536747005BDC4A /* extenions */,
-			);
-			path = components;
-			sourceTree = "<group>";
-		};
 		0F196D18261B602900C46707 /* viewui */ = {
 			isa = PBXGroup;
 			children = (
@@ -153,8 +163,46 @@
 				0F196D1E261B60A700C46707 /* setting.swift */,
 				ADA9CA1B2653D67A005BDC4A /* helper.swift */,
 				0FA90EAA26F4204100CD9355 /* welcom.swift */,
+				0F76BC93278BB54E00FF68D8 /* register.swift */,
+				0F76BC98278BBB8C00FF68D8 /* ResetPassword.swift */,
 			);
 			path = viewui;
+			sourceTree = "<group>";
+		};
+		0F76BC82278B224100FF68D8 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				0F76BC83278B22A800FF68D8 /* NetWorkManager.swift */,
+				0F76BC85278B230300FF68D8 /* LocalFileManager.swift */,
+				0F76BC91278B2C7E00FF68D8 /* Color.swift */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
+		0F76BC87278B24A700FF68D8 /* service */ = {
+			isa = PBXGroup;
+			children = (
+				0F76BC88278B24BD00FF68D8 /* sessions.swift */,
+			);
+			path = service;
+			sourceTree = "<group>";
+		};
+		0F76BC8A278B297800FF68D8 /* viewmodels */ = {
+			isa = PBXGroup;
+			children = (
+				0F76BC8B278B29A900FF68D8 /* ResetPasswordViewModel.swift */,
+				0F76BC8D278B2B0E00FF68D8 /* LoginViewModel.swift */,
+				0F76BC8F278B2B3800FF68D8 /* RegisterViewModel.swift */,
+			);
+			path = viewmodels;
+			sourceTree = "<group>";
+		};
+		0F76BC95278BB5A600FF68D8 /* components */ = {
+			isa = PBXGroup;
+			children = (
+				0F76BC96278BB5D200FF68D8 /* ButtonView.swift */,
+			);
+			path = components;
 			sourceTree = "<group>";
 		};
 		0FAD99DA2652B8780095ACC5 /* models */ = {
@@ -202,12 +250,14 @@
 		0FE211E825FAED7A003F1044 /* voyager2048 */ = {
 			isa = PBXGroup;
 			children = (
+				0F76BC95278BB5A600FF68D8 /* components */,
+				0F76BC8A278B297800FF68D8 /* viewmodels */,
+				0F76BC87278B24A700FF68D8 /* service */,
+				0F76BC82278B224100FF68D8 /* utils */,
 				0FAD99DA2652B8780095ACC5 /* models */,
 				0F196D18261B602900C46707 /* viewui */,
-				0F196D17261B600300C46707 /* components */,
 				0F04E18C25FAF27700F301FF /* api */,
 				0FE211E925FAED7A003F1044 /* voyager2048App.swift */,
-				ADA9CA122653D487005BDC4A /* controller */,
 				0FE211EB25FAED7A003F1044 /* ContentView.swift */,
 				0FE211ED25FAED7F003F1044 /* Assets.xcassets */,
 				0FE211F225FAED7F003F1044 /* Persistence.swift */,
@@ -242,21 +292,6 @@
 				0FE2120D25FAED80003F1044 /* Info.plist */,
 			);
 			path = voyager2048UITests;
-			sourceTree = "<group>";
-		};
-		ADA9C9D526536747005BDC4A /* extenions */ = {
-			isa = PBXGroup;
-			children = (
-				ADA9C9D626536770005BDC4A /* colorExt.swift */,
-			);
-			path = extenions;
-			sourceTree = "<group>";
-		};
-		ADA9CA122653D487005BDC4A /* controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -397,26 +432,35 @@
 			buildActionMask = 2147483647;
 			files = (
 				ADA9CA042653D332005BDC4A /* ItemModel.swift in Sources */,
+				0F76BC90278B2B3800FF68D8 /* RegisterViewModel.swift in Sources */,
+				0F76BC99278BBB8C00FF68D8 /* ResetPassword.swift in Sources */,
 				ADA9CA1C2653D67A005BDC4A /* helper.swift in Sources */,
 				ADA9C9FA2653D1FE005BDC4A /* userModel.swift in Sources */,
 				0FE211F325FAED7F003F1044 /* Persistence.swift in Sources */,
 				0FAD99D52652B6FF0095ACC5 /* service.pb.swift in Sources */,
 				0F196D1A261B609500C46707 /* login.swift in Sources */,
+				0F76BC84278B22A900FF68D8 /* NetWorkManager.swift in Sources */,
 				0FE211EC25FAED7A003F1044 /* ContentView.swift in Sources */,
 				ADA9CA092653D428005BDC4A /* ProjectModel.swift in Sources */,
 				0FAD99D32652B6FF0095ACC5 /* project.pb.swift in Sources */,
 				0FAD99D92652B6FF0095ACC5 /* comment.pb.swift in Sources */,
 				0FAD99D82652B6FF0095ACC5 /* group.pb.swift in Sources */,
-				ADA9C9D726536770005BDC4A /* colorExt.swift in Sources */,
 				0F196D1F261B60A700C46707 /* setting.swift in Sources */,
+				0F76BC94278BB54E00FF68D8 /* register.swift in Sources */,
+				0F76BC8C278B29A900FF68D8 /* ResetPasswordViewModel.swift in Sources */,
 				0FA90EAB26F4204100CD9355 /* welcom.swift in Sources */,
+				0F76BC97278BB5D200FF68D8 /* ButtonView.swift in Sources */,
 				0FAD99D22652B6FF0095ACC5 /* item.pb.swift in Sources */,
 				0FAD99E226555FBC0095ACC5 /* GroupUIView.swift in Sources */,
 				0FAD99D72652B6FF0095ACC5 /* view_model.pb.swift in Sources */,
+				0F76BC92278B2C7E00FF68D8 /* Color.swift in Sources */,
 				0FAD99E8265560FA0095ACC5 /* UserUIView.swift in Sources */,
 				0FE211EA25FAED7A003F1044 /* voyager2048App.swift in Sources */,
+				0F76BC86278B230300FF68D8 /* LocalFileManager.swift in Sources */,
+				0F76BC8E278B2B0E00FF68D8 /* LoginViewModel.swift in Sources */,
 				ADA9C9FF2653D2EB005BDC4A /* groupModel.swift in Sources */,
 				0FAD99D62652B6FF0095ACC5 /* user.pb.swift in Sources */,
+				0F76BC89278B24BD00FF68D8 /* sessions.swift in Sources */,
 				0FE211F625FAED7F003F1044 /* voyager2048.xcdatamodeld in Sources */,
 				0FAD99E4265560770095ACC5 /* FriendsUIView.swift in Sources */,
 				0FAD99EA265561C80095ACC5 /* ExploreUIView.swift in Sources */,
