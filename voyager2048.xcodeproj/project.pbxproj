@@ -21,6 +21,13 @@
 		0F76BC94278BB54E00FF68D8 /* register.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F76BC93278BB54E00FF68D8 /* register.swift */; };
 		0F76BC97278BB5D200FF68D8 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F76BC96278BB5D200FF68D8 /* ButtonView.swift */; };
 		0F76BC99278BBB8C00FF68D8 /* ResetPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F76BC98278BBB8C00FF68D8 /* ResetPassword.swift */; };
+		0F76BC9D278F201200FF68D8 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F76BC9C278F201200FF68D8 /* Home.swift */; };
+		0F76BC9F278F210C00FF68D8 /* GroupService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F76BC9E278F210C00FF68D8 /* GroupService.swift */; };
+		0F76BCA1278F211E00FF68D8 /* ProjectService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F76BCA0278F211E00FF68D8 /* ProjectService.swift */; };
+		0F76BCA3278F213000FF68D8 /* ItemService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F76BCA2278F213000FF68D8 /* ItemService.swift */; };
+		0F76BCA5278F214700FF68D8 /* PersonalService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F76BCA4278F214700FF68D8 /* PersonalService.swift */; };
+		0F76BCA7278F215C00FF68D8 /* SettingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F76BCA6278F215C00FF68D8 /* SettingService.swift */; };
+		0F76BCA9278F218E00FF68D8 /* UtilsSercice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F76BCA8278F218E00FF68D8 /* UtilsSercice.swift */; };
 		0FA90EAB26F4204100CD9355 /* welcom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA90EAA26F4204100CD9355 /* welcom.swift */; };
 		0FAD99D22652B6FF0095ACC5 /* item.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAD99CA2652B6FE0095ACC5 /* item.pb.swift */; };
 		0FAD99D32652B6FF0095ACC5 /* project.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAD99CB2652B6FE0095ACC5 /* project.pb.swift */; };
@@ -79,6 +86,13 @@
 		0F76BC93278BB54E00FF68D8 /* register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = register.swift; sourceTree = "<group>"; };
 		0F76BC96278BB5D200FF68D8 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 		0F76BC98278BBB8C00FF68D8 /* ResetPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPassword.swift; sourceTree = "<group>"; };
+		0F76BC9C278F201200FF68D8 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		0F76BC9E278F210C00FF68D8 /* GroupService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupService.swift; sourceTree = "<group>"; };
+		0F76BCA0278F211E00FF68D8 /* ProjectService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectService.swift; sourceTree = "<group>"; };
+		0F76BCA2278F213000FF68D8 /* ItemService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemService.swift; sourceTree = "<group>"; };
+		0F76BCA4278F214700FF68D8 /* PersonalService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalService.swift; sourceTree = "<group>"; };
+		0F76BCA6278F215C00FF68D8 /* SettingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingService.swift; sourceTree = "<group>"; };
+		0F76BCA8278F218E00FF68D8 /* UtilsSercice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilsSercice.swift; sourceTree = "<group>"; };
 		0FA90EAA26F4204100CD9355 /* welcom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = welcom.swift; sourceTree = "<group>"; };
 		0FAD99CA2652B6FE0095ACC5 /* item.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = item.pb.swift; sourceTree = "<group>"; };
 		0FAD99CB2652B6FE0095ACC5 /* project.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = project.pb.swift; sourceTree = "<group>"; };
@@ -183,6 +197,12 @@
 			isa = PBXGroup;
 			children = (
 				0F76BC88278B24BD00FF68D8 /* sessions.swift */,
+				0F76BC9E278F210C00FF68D8 /* GroupService.swift */,
+				0F76BCA0278F211E00FF68D8 /* ProjectService.swift */,
+				0F76BCA2278F213000FF68D8 /* ItemService.swift */,
+				0F76BCA4278F214700FF68D8 /* PersonalService.swift */,
+				0F76BCA6278F215C00FF68D8 /* SettingService.swift */,
+				0F76BCA8278F218E00FF68D8 /* UtilsSercice.swift */,
 			);
 			path = service;
 			sourceTree = "<group>";
@@ -190,6 +210,7 @@
 		0F76BC8A278B297800FF68D8 /* viewmodels */ = {
 			isa = PBXGroup;
 			children = (
+				0F76BC9C278F201200FF68D8 /* Home.swift */,
 				0F76BC8B278B29A900FF68D8 /* ResetPasswordViewModel.swift */,
 				0F76BC8D278B2B0E00FF68D8 /* LoginViewModel.swift */,
 				0F76BC8F278B2B3800FF68D8 /* RegisterViewModel.swift */,
@@ -433,6 +454,7 @@
 			files = (
 				ADA9CA042653D332005BDC4A /* ItemModel.swift in Sources */,
 				0F76BC90278B2B3800FF68D8 /* RegisterViewModel.swift in Sources */,
+				0F76BCA3278F213000FF68D8 /* ItemService.swift in Sources */,
 				0F76BC99278BBB8C00FF68D8 /* ResetPassword.swift in Sources */,
 				ADA9CA1C2653D67A005BDC4A /* helper.swift in Sources */,
 				ADA9C9FA2653D1FE005BDC4A /* userModel.swift in Sources */,
@@ -450,20 +472,26 @@
 				0F76BC8C278B29A900FF68D8 /* ResetPasswordViewModel.swift in Sources */,
 				0FA90EAB26F4204100CD9355 /* welcom.swift in Sources */,
 				0F76BC97278BB5D200FF68D8 /* ButtonView.swift in Sources */,
+				0F76BC9F278F210C00FF68D8 /* GroupService.swift in Sources */,
 				0FAD99D22652B6FF0095ACC5 /* item.pb.swift in Sources */,
 				0FAD99E226555FBC0095ACC5 /* GroupUIView.swift in Sources */,
 				0FAD99D72652B6FF0095ACC5 /* view_model.pb.swift in Sources */,
 				0F76BC92278B2C7E00FF68D8 /* Color.swift in Sources */,
+				0F76BCA9278F218E00FF68D8 /* UtilsSercice.swift in Sources */,
 				0FAD99E8265560FA0095ACC5 /* UserUIView.swift in Sources */,
+				0F76BCA5278F214700FF68D8 /* PersonalService.swift in Sources */,
 				0FE211EA25FAED7A003F1044 /* voyager2048App.swift in Sources */,
+				0F76BCA1278F211E00FF68D8 /* ProjectService.swift in Sources */,
 				0F76BC86278B230300FF68D8 /* LocalFileManager.swift in Sources */,
 				0F76BC8E278B2B0E00FF68D8 /* LoginViewModel.swift in Sources */,
+				0F76BC9D278F201200FF68D8 /* Home.swift in Sources */,
 				ADA9C9FF2653D2EB005BDC4A /* groupModel.swift in Sources */,
 				0FAD99D62652B6FF0095ACC5 /* user.pb.swift in Sources */,
 				0F76BC89278B24BD00FF68D8 /* sessions.swift in Sources */,
 				0FE211F625FAED7F003F1044 /* voyager2048.xcdatamodeld in Sources */,
 				0FAD99E4265560770095ACC5 /* FriendsUIView.swift in Sources */,
 				0FAD99EA265561C80095ACC5 /* ExploreUIView.swift in Sources */,
+				0F76BCA7278F215C00FF68D8 /* SettingService.swift in Sources */,
 				0FAD99D42652B6FF0095ACC5 /* team.pb.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -18,3 +18,5 @@ struct UserModel: Hashable, Codable, Identifiable {
 struct SessionUserDetails {
     let email: String
 }
+
+

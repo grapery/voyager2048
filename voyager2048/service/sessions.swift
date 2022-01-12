@@ -19,6 +19,12 @@ protocol AuthenticationServiceProtocol {
     func sendPasswordReset(email: String) -> AnyPublisher<Void, Error>
 }
 
+class SessionServiceFactory {
+    static func getService() -> SessionService {
+        return SessionService()
+    }
+}
+
 class SessionService: ObservableObject {
     @Published var state: SessionState = .loggedOut
     @Published var userDetails: SessionUserDetails?
@@ -27,6 +33,8 @@ class SessionService: ObservableObject {
         fatalError("This method must be overridden")
     }
 }
+
+
 
 
 final class FakeAuthService: AuthenticationServiceProtocol {
