@@ -60,39 +60,34 @@ struct InputPasswordView: View {
 }
 
 
-struct SearchBarView: View {
-    @Binding var searchText: String
+struct CircleButtonAnimationView: View {
+    @Binding var animate : Bool
     
     var body: some View {
-        HStack{
-            Image(systemName: "magnifyingglass")
-                .disableAutocorrection(true)
-                .foregroundColor(searchText.isEmpty ? Color.theme.secondaryText : Color.theme.accent)
-            TextField("Search by name or symbol...", text: $searchText)
-                .accessibility(identifier: "SearchTextField")
-                .foregroundColor(Color.theme.accent)
-                .overlay(
-                    Image(systemName: "xmark.circle.fill")
-                        .padding()
-                        .offset(x: 10)
-                        .foregroundColor(Color.theme.accent)
-                        .opacity(searchText.isEmpty ? 0.0 : 1.0)
-                        .onTapGesture {
-                            UIApplication.shared.endEditing()
-                            searchText = ""
-                        },
-                    alignment: .trailing
-                )
-
-        }
-        .font(.headline)
-        .padding()
-        .background(
-            RoundedRectangle(cornerRadius: 25)
-                .fill(Color.theme.background)
-                .shadow(color: Color.theme.accent.opacity(0.15), radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/, x: /*@START_MENU_TOKEN@*/0.0/*@END_MENU_TOKEN@*/, y: /*@START_MENU_TOKEN@*/0.0/*@END_MENU_TOKEN@*/)
-        )
-        .padding()
+        Circle()
+            .stroke(lineWidth: 5.0)
+            .scale(animate ? 1.0 : 0.0)
+            .opacity(animate ? 0.0 : 1.0 )
+            .animation(animate ? Animation.easeOut(duration: 1.0) : .none)
     }
 }
+
+struct CircleButtonView: View {
+    let iconName : String
+    
+    var body: some View {
+        Image(systemName: iconName)
+            .font(.headline)
+            .foregroundColor(Color.theme.accent)
+            .frame(width: 50, height: 50)
+            .background(
+                Circle()
+                    .foregroundColor(Color.theme.background)
+            )
+            .shadow(color: Color.theme.accent.opacity(0.25), radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/, x: /*@START_MENU_TOKEN@*/0.0/*@END_MENU_TOKEN@*/, y: /*@START_MENU_TOKEN@*/0.0/*@END_MENU_TOKEN@*/)
+            .padding()
+    }
+}
+
+
 

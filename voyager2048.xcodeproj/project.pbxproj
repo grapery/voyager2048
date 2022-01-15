@@ -28,6 +28,9 @@
 		0F76BCA5278F214700FF68D8 /* PersonalService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F76BCA4278F214700FF68D8 /* PersonalService.swift */; };
 		0F76BCA7278F215C00FF68D8 /* SettingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F76BCA6278F215C00FF68D8 /* SettingService.swift */; };
 		0F76BCA9278F218E00FF68D8 /* UtilsSercice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F76BCA8278F218E00FF68D8 /* UtilsSercice.swift */; };
+		0F76BCAB278FB11D00FF68D8 /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F76BCAA278FB11D00FF68D8 /* BaseService.swift */; };
+		0F76BCAD278FB3B600FF68D8 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F76BCAC278FB3B600FF68D8 /* SearchBar.swift */; };
+		0F76BCB12792694200FF68D8 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F76BCB02792694200FF68D8 /* Home.swift */; };
 		0FA90EAB26F4204100CD9355 /* welcom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA90EAA26F4204100CD9355 /* welcom.swift */; };
 		0FAD99D22652B6FF0095ACC5 /* item.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAD99CA2652B6FE0095ACC5 /* item.pb.swift */; };
 		0FAD99D32652B6FF0095ACC5 /* project.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAD99CB2652B6FE0095ACC5 /* project.pb.swift */; };
@@ -42,7 +45,6 @@
 		0FAD99E8265560FA0095ACC5 /* UserUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAD99E7265560FA0095ACC5 /* UserUIView.swift */; };
 		0FAD99EA265561C80095ACC5 /* ExploreUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAD99E9265561C80095ACC5 /* ExploreUIView.swift */; };
 		0FE211EA25FAED7A003F1044 /* voyager2048App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE211E925FAED7A003F1044 /* voyager2048App.swift */; };
-		0FE211EC25FAED7A003F1044 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE211EB25FAED7A003F1044 /* ContentView.swift */; };
 		0FE211EE25FAED7F003F1044 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FE211ED25FAED7F003F1044 /* Assets.xcassets */; };
 		0FE211F125FAED7F003F1044 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FE211F025FAED7F003F1044 /* Preview Assets.xcassets */; };
 		0FE211F325FAED7F003F1044 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE211F225FAED7F003F1044 /* Persistence.swift */; };
@@ -93,6 +95,9 @@
 		0F76BCA4278F214700FF68D8 /* PersonalService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalService.swift; sourceTree = "<group>"; };
 		0F76BCA6278F215C00FF68D8 /* SettingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingService.swift; sourceTree = "<group>"; };
 		0F76BCA8278F218E00FF68D8 /* UtilsSercice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilsSercice.swift; sourceTree = "<group>"; };
+		0F76BCAA278FB11D00FF68D8 /* BaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
+		0F76BCAC278FB3B600FF68D8 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		0F76BCB02792694200FF68D8 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		0FA90EAA26F4204100CD9355 /* welcom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = welcom.swift; sourceTree = "<group>"; };
 		0FAD99CA2652B6FE0095ACC5 /* item.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = item.pb.swift; sourceTree = "<group>"; };
 		0FAD99CB2652B6FE0095ACC5 /* project.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = project.pb.swift; sourceTree = "<group>"; };
@@ -108,7 +113,6 @@
 		0FAD99E9265561C80095ACC5 /* ExploreUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreUIView.swift; sourceTree = "<group>"; };
 		0FE211E625FAED7A003F1044 /* voyager2048.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = voyager2048.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FE211E925FAED7A003F1044 /* voyager2048App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = voyager2048App.swift; sourceTree = "<group>"; };
-		0FE211EB25FAED7A003F1044 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0FE211ED25FAED7F003F1044 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0FE211F025FAED7F003F1044 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0FE211F225FAED7F003F1044 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -203,6 +207,7 @@
 				0F76BCA4278F214700FF68D8 /* PersonalService.swift */,
 				0F76BCA6278F215C00FF68D8 /* SettingService.swift */,
 				0F76BCA8278F218E00FF68D8 /* UtilsSercice.swift */,
+				0F76BCAA278FB11D00FF68D8 /* BaseService.swift */,
 			);
 			path = service;
 			sourceTree = "<group>";
@@ -222,6 +227,7 @@
 			isa = PBXGroup;
 			children = (
 				0F76BC96278BB5D200FF68D8 /* ButtonView.swift */,
+				0F76BCAC278FB3B600FF68D8 /* SearchBar.swift */,
 			);
 			path = components;
 			sourceTree = "<group>";
@@ -279,12 +285,12 @@
 				0F196D18261B602900C46707 /* viewui */,
 				0F04E18C25FAF27700F301FF /* api */,
 				0FE211E925FAED7A003F1044 /* voyager2048App.swift */,
-				0FE211EB25FAED7A003F1044 /* ContentView.swift */,
 				0FE211ED25FAED7F003F1044 /* Assets.xcassets */,
 				0FE211F225FAED7F003F1044 /* Persistence.swift */,
 				0FE211F725FAED7F003F1044 /* Info.plist */,
 				0FE211F425FAED7F003F1044 /* voyager2048.xcdatamodeld */,
 				0FE211EF25FAED7F003F1044 /* Preview Content */,
+				0F76BCB02792694200FF68D8 /* Home.swift */,
 			);
 			path = voyager2048;
 			sourceTree = "<group>";
@@ -462,10 +468,10 @@
 				0FAD99D52652B6FF0095ACC5 /* service.pb.swift in Sources */,
 				0F196D1A261B609500C46707 /* login.swift in Sources */,
 				0F76BC84278B22A900FF68D8 /* NetWorkManager.swift in Sources */,
-				0FE211EC25FAED7A003F1044 /* ContentView.swift in Sources */,
 				ADA9CA092653D428005BDC4A /* ProjectModel.swift in Sources */,
 				0FAD99D32652B6FF0095ACC5 /* project.pb.swift in Sources */,
 				0FAD99D92652B6FF0095ACC5 /* comment.pb.swift in Sources */,
+				0F76BCB12792694200FF68D8 /* Home.swift in Sources */,
 				0FAD99D82652B6FF0095ACC5 /* group.pb.swift in Sources */,
 				0F196D1F261B60A700C46707 /* setting.swift in Sources */,
 				0F76BC94278BB54E00FF68D8 /* register.swift in Sources */,
@@ -484,12 +490,14 @@
 				0F76BCA1278F211E00FF68D8 /* ProjectService.swift in Sources */,
 				0F76BC86278B230300FF68D8 /* LocalFileManager.swift in Sources */,
 				0F76BC8E278B2B0E00FF68D8 /* LoginViewModel.swift in Sources */,
+				0F76BCAB278FB11D00FF68D8 /* BaseService.swift in Sources */,
 				0F76BC9D278F201200FF68D8 /* Home.swift in Sources */,
 				ADA9C9FF2653D2EB005BDC4A /* groupModel.swift in Sources */,
 				0FAD99D62652B6FF0095ACC5 /* user.pb.swift in Sources */,
 				0F76BC89278B24BD00FF68D8 /* sessions.swift in Sources */,
 				0FE211F625FAED7F003F1044 /* voyager2048.xcdatamodeld in Sources */,
 				0FAD99E4265560770095ACC5 /* FriendsUIView.swift in Sources */,
+				0F76BCAD278FB3B600FF68D8 /* SearchBar.swift in Sources */,
 				0FAD99EA265561C80095ACC5 /* ExploreUIView.swift in Sources */,
 				0F76BCA7278F215C00FF68D8 /* SettingService.swift in Sources */,
 				0FAD99D42652B6FF0095ACC5 /* team.pb.swift in Sources */,

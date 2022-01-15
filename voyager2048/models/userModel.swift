@@ -15,8 +15,5 @@ struct UserModel: Hashable, Codable, Identifiable {
     var email: String
 }
 
-struct SessionUserDetails {
-    let email: String
-}
 
 

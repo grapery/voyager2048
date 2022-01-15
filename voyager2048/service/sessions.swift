@@ -13,6 +13,11 @@ enum SessionState {
     case loggedOut
 }
 
+struct SessionUserDetails {
+    let email: String
+}
+
+
 protocol AuthenticationServiceProtocol {
     func login(email: String, password: String) -> AnyPublisher<Void, Error>
     func register(email: String, password: String) -> AnyPublisher<Void, Error>

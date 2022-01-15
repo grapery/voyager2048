@@ -9,5 +9,15 @@ import Foundation
 
 
 protocol ProjectService {
-    <#requirements#>
+    func getGroupProject()
+    func getProjectInfo()
+    func getProjectSetting()
+    func getProjectPaticpents()
+    func getProjectWatcher()
+    
+    func getProjectDiscuss()
+    func getProjectTodo()
+    func getProjectIssues()
 }
+
+
