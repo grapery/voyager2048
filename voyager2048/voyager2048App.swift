@@ -16,11 +16,21 @@ struct voyager2048App: App {
     
     init(){
         self.newWorker = NetworkManager()
+        sessionService.state = .loggedIn
     }
     var body: some Scene {
         WindowGroup {
-            GraperyApp()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            NavigationView {
+                switch sessionService.state {
+                case .loggedIn:
+                    GraperyApp()
+                        .environment(\.managedObjectContext, persistenceController.container.viewContext)
+                case .loggedOut:
+                    LoginView()
+                }
+            }
+            .navigationViewStyle(StackNavigationViewStyle())
         }
+        
     }
 }

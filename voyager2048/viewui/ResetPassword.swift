@@ -16,7 +16,6 @@ struct ResetPasswordView: View {
             ZStack {
                 Color.theme.background.ignoresSafeArea()
                 VStack {
-                    logo
                     VStack() {
                         InputTextFieldView(text: $vm.email, placeholder: "E-mail", keyboardType: .emailAddress)
                         sendPasswordResetButton
@@ -42,17 +41,8 @@ struct ResetPasswordView: View {
     }
 }
 
-struct ForgorPasswordView_Previews: PreviewProvider {
-    static var previews: some View {
-        NavigationView {
-            ForgotPasswordView()
-                .preferredColorScheme(.dark)
-        }
-        .preferredColorScheme(.light)
-    }
-}
 
-extension ForgotPasswordView {
+extension ResetPasswordView {
     private var logo: some View {
         Image("logo-transparent")
             .resizable()
@@ -61,7 +51,7 @@ extension ForgotPasswordView {
     
     private var sendPasswordResetButton: some View {
         ButtonView(label: "Send password reset") {
-            vm.forgotPassword()
+            
         }
     }
 }
