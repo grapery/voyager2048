@@ -68,7 +68,6 @@ final class DataOnboarding: ObservableObject {
 
 struct GraperyApp: View {
     @State private var selection: Int = 0
-    @State private var islogin: Bool = false
     var body: some View {
             NavigationView {
                 TabView(selection: $selection) {
@@ -111,26 +110,26 @@ struct GraperyApp: View {
             var image: Image {
                 switch self {
                 case .You:
-                    return Image(".you")
+                    return Image(systemName: "person")
                 case .Explore:
-                    return Image(".explore")
+                    return Image(systemName: "star")
                 case .Org:
-                    return Image(".group")
+                    return Image(systemName: "contact")
                 case .Friends:
-                    return Image(".friends")
+                    return Image(systemName: "friend")
                 }
             }
             
             var selectedImage: Image {
                 switch self {
                 case .You:
-                    return Image(".you_selected")
+                    return Image(systemName: "person.fill")
                 case .Explore:
-                    return Image("explore_selected")
+                    return Image(systemName: "star.fill")
                 case .Org:
-                    return Image(".group_selected")
+                    return Image(systemName: "contact.fill")
                 case .Friends:
-                    return Image(".friends_selected")
+                    return Image(systemName: "friend.fill")
                 }
             }
             
