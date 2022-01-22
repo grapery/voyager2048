@@ -110,7 +110,9 @@ struct GraperyApp: View {
             var image: Image {
                 switch self {
                 case .You:
-                    return Image(systemName: "person")
+                    let img = Image(systemName: "person")
+                    return img
+                        
                 case .Explore:
                     return Image(systemName: "star")
                 case .Org:
