@@ -110,9 +110,7 @@ struct GraperyApp: View {
             var image: Image {
                 switch self {
                 case .You:
-                    let img = Image(systemName: "person")
-                    return img
-                        
+                    return Image(systemName: "person")
                 case .Explore:
                     return Image(systemName: "star")
                 case .Org:
@@ -173,7 +171,12 @@ struct GraperyApp: View {
             var body: some View {
                 VStack {
                     if type.rawValue == selection {
-                        type.selectedImage
+                        if #available(iOS 15.0, *) {
+                            
+                            type.selectedImage.symbolVariant(.circle.fill)
+                        } else {
+                            type.selectedImage
+                        }
                     } else {
                         type.image
                     }

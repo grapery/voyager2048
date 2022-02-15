@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0F04E18625FAF1CF00F301FF /* SwiftProtobuf in Frameworks */ = {isa = PBXBuildFile; productRef = 0F04E18525FAF1CF00F301FF /* SwiftProtobuf */; };
 		0F04E18825FAF1CF00F301FF /* SwiftProtobufPluginLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 0F04E18725FAF1CF00F301FF /* SwiftProtobufPluginLibrary */; };
+		0F05B76527BB2EC300DB8910 /* StringVailed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F05B76427BB2EC300DB8910 /* StringVailed.swift */; };
 		0F196D1A261B609500C46707 /* login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F196D19261B609500C46707 /* login.swift */; };
 		0F196D1F261B60A700C46707 /* setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F196D1E261B60A700C46707 /* setting.swift */; };
 		0F76BC84278B22A900FF68D8 /* NetWorkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F76BC83278B22A800FF68D8 /* NetWorkManager.swift */; };
@@ -76,6 +77,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F05B76427BB2EC300DB8910 /* StringVailed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringVailed.swift; sourceTree = "<group>"; };
 		0F196D19261B609500C46707 /* login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = login.swift; sourceTree = "<group>"; };
 		0F196D1E261B60A700C46707 /* setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = setting.swift; sourceTree = "<group>"; };
 		0F76BC83278B22A800FF68D8 /* NetWorkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetWorkManager.swift; sourceTree = "<group>"; };
@@ -193,6 +195,7 @@
 				0F76BC83278B22A800FF68D8 /* NetWorkManager.swift */,
 				0F76BC85278B230300FF68D8 /* LocalFileManager.swift */,
 				0F76BC91278B2C7E00FF68D8 /* Color.swift */,
+				0F05B76427BB2EC300DB8910 /* StringVailed.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -499,6 +502,7 @@
 				0FAD99E4265560770095ACC5 /* FriendsUIView.swift in Sources */,
 				0F76BCAD278FB3B600FF68D8 /* SearchBar.swift in Sources */,
 				0FAD99EA265561C80095ACC5 /* ExploreUIView.swift in Sources */,
+				0F05B76527BB2EC300DB8910 /* StringVailed.swift in Sources */,
 				0F76BCA7278F215C00FF68D8 /* SettingService.swift in Sources */,
 				0FAD99D42652B6FF0095ACC5 /* team.pb.swift in Sources */,
 			);
@@ -645,6 +649,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
